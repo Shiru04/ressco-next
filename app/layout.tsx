@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BUSINESS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
+import { Tracking } from "@/components/analytics/Tracking";
 
 export const metadata: Metadata = buildMetadata({
   title: `${BUSINESS.name} | HVAC Installation, Repair & Maintenance`,
@@ -85,6 +86,7 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Tracking />
       </body>
     </html>
   );

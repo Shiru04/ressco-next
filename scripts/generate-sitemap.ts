@@ -3,7 +3,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://gc-heatingadcooling.com"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://resscometals.com"
 )
   .trim()
   .replace(/\/+$/, "");
@@ -29,51 +29,45 @@ function xmlEscape(s: string) {
     .replaceAll("'", "&apos;");
 }
 
-/**
- * Import a module by absolute filesystem path in a Windows-safe way.
- */
 async function importByPath(absPath: string) {
   const url = pathToFileURL(absPath).href;
   return import(url);
 }
 
 async function main() {
-  // ✅ Adjust if your libs are in /lib instead of /src/lib
-  const servicesPath = path.resolve(process.cwd(), "lib", "services.ts");
-  const areasPath = path.resolve(process.cwd(), "lib", "areas.ts");
-  const resourcesPath = path.resolve(process.cwd(), "lib", "posts.ts");
+  const catalogPath = path.resolve(
+    process.cwd(),
+    "lib",
+    "catalog.generated.ts",
+  );
+  if (!fs.existsSync(catalogPath)) {
+    console.warn(
+      "⚠️ catalog.generated.ts missing; run `npm run sync-catalog` first.",
+    );
+  }
 
-  const servicesMod = await importByPath(servicesPath);
-  const areasMod = await importByPath(areasPath);
-  const resourcesMod = await importByPath(resourcesPath);
+  const catalogMod = fs.existsSync(catalogPath)
+    ? await importByPath(catalogPath)
+    : null;
 
-  const SERVICES = (servicesMod.SERVICES ?? []) as Array<{ slug: string }>;
-  const SERVICE_AREAS = (areasMod.SERVICE_AREAS ?? []) as Array<{
-    slug: string;
-  }>;
-  const RESOURCES = (resourcesMod.RESOURCES ?? []) as Array<{ slug: string }>;
+  const CATEGORIES = (catalogMod?.CATEGORIES ?? []) as Array<{ path: string }>;
+  const PRODUCTS = (catalogMod?.PRODUCTS ?? []) as Array<{ path: string }>;
 
   const staticRoutes = [
     "/",
     "/about",
-    "/services",
-    "/service-areas",
-    "/resources",
-    "/reviews",
-    "/financing",
     "/contact",
-    "/promotions",
+    "/privacy-policy",
+    "/product-list",
   ];
 
   const urls = new Set<string>();
-
   staticRoutes.forEach((r) => urls.add(abs(r)));
 
-  SERVICES.forEach((s) => s?.slug && urls.add(abs(`/services/${s.slug}`)));
-  SERVICE_AREAS.forEach(
-    (a) => a?.slug && urls.add(abs(`/service-areas/${a.slug}`)),
-  );
-  RESOURCES.forEach((r) => r?.slug && urls.add(abs(`/resources/${r.slug}`)));
+  // Category pages are already full Wix paths like /product-categories/...
+  CATEGORIES.forEach((c) => c?.path && urls.add(abs(c.path)));
+  // Product pages are already full Wix paths like /product-list/<slug>
+  PRODUCTS.forEach((p) => p?.path && urls.add(abs(p.path)));
 
   const body = Array.from(urls)
     .sort()
