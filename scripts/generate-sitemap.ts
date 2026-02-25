@@ -59,6 +59,7 @@ async function main() {
     "/contact",
     "/privacy-policy",
     "/product-list",
+    "/product-categories",
   ];
 
   const urls = new Set<string>();

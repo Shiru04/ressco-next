@@ -29,3 +29,22 @@ body {
     scroll-behavior: smooth;
   }
 }
+:root {
+  /* ===== RESSCO BRAND COLORS (from screenshots) ===== */
+
+  /* Primary Red (CTA / Buttons) */
+  --brand-primary: 356 77% 42%; /* approx #C1121F */
+
+  /* Dark / Almost Black */
+  --brand-dark: 0 0% 7%; /* #111111 */
+
+  /* Industrial Light Gray */
+  --brand-gray: 0 0% 95%; /* #F3F3F3 */
+
+  /* Pure White */
+  --brand-white: 0 0% 100%;
+
+  /* Text defaults */
+  --fg: var(--brand-dark);
+  --bg: var(--brand-white);
+}

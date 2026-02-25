@@ -6,9 +6,10 @@ export default {
     extend: {
       colors: {
         brand: {
-          red: "#D61F26",
-          black: "#0A0A0A",
-          gray: "#F4F4F5",
+          primary: "hsl(var(--brand-primary))",
+          dark: "hsl(var(--brand-dark))",
+          gray: "hsl(var(--brand-gray))",
+          white: "hsl(var(--brand-white))",
         },
       },
       boxShadow: {

@@ -82,83 +82,61 @@ export default function AboutPage() {
       </Section>
 
       <Section className="bg-brand-gray py-12 sm:py-14">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <Card className="p-6">
-            <div className="text-xl font-extrabold">Values</div>
-            <div className="mt-4 space-y-4 text-black/70">
+        <Card className="p-6">
+          <div className="text-xl font-extrabold">Values</div>
+          <div className="mt-4 space-y-4 text-black/70">
+            <div>
+              <div className="font-bold text-black/80">We are achievers.</div>
               <div>
-                <div className="font-bold text-black/80">We are achievers.</div>
-                <div>
-                  If you can draw it on paper, we can make it in metal — on time
-                  and on budget.
-                </div>
-              </div>
-
-              <div>
-                <div className="font-bold text-black/80">
-                  Our customers are our partners.
-                </div>
-                <div>
-                  We are service-oriented and focused on our customers&apos;
-                  needs — we work rigorously to ensure our partnerships are
-                  successful and continually growing.
-                </div>
-              </div>
-
-              <div>
-                <div className="font-bold text-black/80">We are a team.</div>
-                <div>
-                  We are committed to the future of this company and its
-                  strategic growth through the employees that help make us
-                  successful every day. We promote a healthy work-life balance
-                  and strive to promote a positive corporate culture.
-                </div>
-              </div>
-
-              <div>
-                <div className="font-bold text-black/80">
-                  We do what we say we will do.
-                </div>
-                <div>
-                  We “walk the walk.” We are passionate about integrity and
-                  honesty: a combination that works for us and you!
-                </div>
-              </div>
-
-              <div>
-                <div className="font-bold text-black/80">
-                  We’ve got an attitude!
-                </div>
-                <div>
-                  We foster a culture of Can Do, where no member of our team
-                  will give up until we&apos;ve “got it.” Every challenge we
-                  encounter, we manage in the same thoughtful and thorough
-                  manner, no matter how small or large the job it may be.
-                </div>
+                If you can draw it on paper, we can make it in metal — on time
+                and on budget.
               </div>
             </div>
-          </Card>
 
-          <Card className="relative overflow-hidden p-0 min-h-[420px] border border-black/10">
-            {/* Uses placeholder created in FASE B */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${ASSETS.missionHero})` }}
-            />
-            <div className="absolute inset-0 bg-black/45" />
-            <div className="relative p-7">
-              <div className="text-sm font-extrabold tracking-wide text-white/80">
-                Motivational Quote
+            <div>
+              <div className="font-bold text-black/80">
+                Our customers are our partners.
               </div>
-              <div className="mt-3 text-2xl font-extrabold text-white">
-                [[PENDING: quote text]]
-              </div>
-              <div className="mt-4 text-white/85">
-                (Sección requerida en DOCX: “MOTIVATIONAL QUOTE…”.)
+              <div>
+                We are service-oriented and focused on our customers&apos; needs
+                — we work rigorously to ensure our partnerships are successful
+                and continually growing.
               </div>
             </div>
-          </Card>
-        </div>
+
+            <div>
+              <div className="font-bold text-black/80">We are a team.</div>
+              <div>
+                We are committed to the future of this company and its strategic
+                growth through the employees that help make us successful every
+                day. We promote a healthy work-life balance and strive to
+                promote a positive corporate culture.
+              </div>
+            </div>
+
+            <div>
+              <div className="font-bold text-black/80">
+                We do what we say we will do.
+              </div>
+              <div>
+                We “walk the walk.” We are passionate about integrity and
+                honesty: a combination that works for us and you!
+              </div>
+            </div>
+
+            <div>
+              <div className="font-bold text-black/80">
+                We’ve got an attitude!
+              </div>
+              <div>
+                We foster a culture of Can Do, where no member of our team will
+                give up until we&apos;ve “got it.” Every challenge we encounter,
+                we manage in the same thoughtful and thorough manner, no matter
+                how small or large the job it may be.
+              </div>
+            </div>
+          </div>
+        </Card>
       </Section>
 
       <Section className="py-12 sm:py-14">

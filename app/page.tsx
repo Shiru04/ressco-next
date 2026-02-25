@@ -99,27 +99,40 @@ export default function HomePage() {
               Built for contractors who need reliability
             </h2>
             <p className="mt-4 text-black/70">
-              [[PENDING: decide si este párrafo usa extracto del DOCX o se
-              mantiene corto estilo Home.]]
+              Your HVAC projects depend on precision, speed, and reliability. At
+              RESSCO Metals, we provide custom HVAC sheet metal fabrication,
+              laser cutting, and supply chain support designed specifically for
+              contractors, builders, and industrial project managers who can’t
+              afford delays or rework.
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               <Card className="p-4">
-                <div className="text-sm font-extrabold">Benefit 1</div>
+                <div className="text-sm font-extrabold">
+                  On-Time Fabrication That Keeps Projects Moving
+                </div>
                 <div className="mt-2 text-sm text-black/60">
-                  [[PENDING: reemplazar Benefit 1 del Wix por copy final]]
+                  We deliver galvanized, stainless steel, and aluminum HVAC
+                  components with reliable lead times and transparent
+                  communication.
                 </div>
               </Card>
               <Card className="p-4">
-                <div className="text-sm font-extrabold">Benefit 2</div>
+                <div className="text-sm font-extrabold">
+                  Precision Metal That Reduces Costly Rework
+                </div>
                 <div className="mt-2 text-sm text-black/60">
-                  [[PENDING: reemplazar Benefit 2 del Wix por copy final]]
+                  From custom ductwork to laser-cut parts and heavy-gauge steel,
+                  every piece is fabricated to fit right the first time.
                 </div>
               </Card>
               <Card className="p-4">
-                <div className="text-sm font-extrabold">Benefit 3</div>
+                <div className="text-sm font-extrabold">
+                  A Manufacturing Partner Built for Long-Term Growth
+                </div>
                 <div className="mt-2 text-sm text-black/60">
-                  [[PENDING: reemplazar Benefit 3 del Wix por copy final]]
+                  We combine 25+ years of HVAC sheet metal expertise with
+                  responsive customer service and real accountability.
                 </div>
               </Card>
             </div>
