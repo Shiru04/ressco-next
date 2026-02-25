@@ -1,170 +1,112 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
-import { createPortal } from "react-dom";
 import Link from "next/link";
+import { useEffect, useId, useState } from "react";
 import { BUSINESS, NAV } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-export function MobileMenu({ variant }: { variant: "default" | "landing" }) {
+export function MobileMenu(props: { variant?: "default" | "landing" }) {
+  const variant = props.variant ?? "default";
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const panelId = useId();
 
-  useEffect(() => setMounted(true), []);
-
   useEffect(() => {
-    if (!open) return;
-
-    const onKeyDown = (e: KeyboardEvent) => {
+    function onKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-
-    // lock scroll
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = prevOverflow;
-    };
+    }
+    if (open) window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  const Trigger = (
-    <button
-      type="button"
-      className="lg:hidden ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white hover:bg-black/5"
-      aria-label={open ? "Close menu" : "Open menu"}
-      aria-controls={panelId}
-      aria-expanded={open}
-      onClick={() => setOpen((v) => !v)}
-    >
-      <div className="flex flex-col gap-1">
-        <span
-          className={cn(
-            "h-0.5 w-5 bg-black transition",
-            open && "translate-y-1.5 rotate-45",
-          )}
-        />
-        <span
-          className={cn("h-0.5 w-5 bg-black transition", open && "opacity-0")}
-        />
-        <span
-          className={cn(
-            "h-0.5 w-5 bg-black transition",
-            open && "-translate-y-1.5 -rotate-45",
-          )}
-        />
-      </div>
-    </button>
-  );
+  return (
+    <div className="lg:hidden">
+      <button
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-black shadow-soft"
+        aria-label="Open menu"
+        aria-controls={panelId}
+        aria-expanded={open}
+        onClick={() => setOpen(true)}
+      >
+        ☰
+      </button>
 
-  const Overlay = mounted
-    ? createPortal(
-        <div
-          className={cn(
-            "fixed inset-0 lg:hidden",
-            // z-index máximo “práctico” para ganar cualquier guerra
-            "z-[2147483647]",
-            open ? "pointer-events-auto" : "pointer-events-none",
-          )}
-          aria-hidden={!open}
-        >
-          {/* Backdrop */}
+      {open ? (
+        <div className="fixed inset-0 z-[60]">
           <button
-            type="button"
-            className={cn(
-              "absolute inset-0 bg-black/45 transition-opacity",
-              open ? "opacity-100" : "opacity-0",
-            )}
+            className="absolute inset-0 bg-black/40"
+            aria-label="Close menu"
             onClick={() => setOpen(false)}
-            aria-label="Close menu overlay"
           />
-
-          {/* Panel */}
-          <aside
+          <div
             id={panelId}
             className={cn(
-              "absolute right-0 top-0 h-full w-[86%] max-w-sm bg-white shadow-2xl",
-              "transition-transform will-change-transform",
-              open ? "translate-x-0" : "translate-x-full",
+              "absolute right-0 top-0 h-full w-[86vw] max-w-sm bg-white p-5 shadow-2xl",
+              "border-l border-black/10",
             )}
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex items-center justify-between border-b border-black/10 p-4">
-              <div className="text-sm font-semibold text-black/80">Menu</div>
+            <div className="flex items-center justify-between">
+              <div className="text-sm font-extrabold tracking-wide text-black/60">
+                MENU
+              </div>
               <button
-                type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 hover:bg-black/5"
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-black/70 hover:bg-black/5"
                 onClick={() => setOpen(false)}
-                aria-label="Close menu"
               >
-                ✕
+                Close
               </button>
             </div>
 
-            <nav className="p-4 overflow-y-auto">
-              <div className="flex flex-col gap-1 text-base font-semibold">
-                {variant === "default" ? (
-                  <>
-                    {NAV.slice(0, 5).map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={() => setOpen(false)}
-                        className="rounded-xl px-3 py-3 text-black/90 hover:bg-black/5"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+            <div className="mt-4 grid gap-2">
+              {variant === "default"
+                ? NAV.map((item) => (
                     <Link
-                      href="/promotions"
+                      key={item.href}
+                      href={item.href}
                       onClick={() => setOpen(false)}
-                      className="rounded-xl px-3 py-3 text-brand-red hover:bg-black/5"
+                      className="rounded-xl px-3 py-3 text-sm font-semibold text-black/80 hover:bg-black/5"
                     >
-                      Promotions
+                      {item.label}
                     </Link>
-                  </>
-                ) : (
-                  <div className="rounded-xl bg-black/5 px-3 py-3 text-sm font-semibold text-black/70">
-                    Specials &amp; Fast Booking
-                  </div>
-                )}
-              </div>
+                  ))
+                : null}
 
-              <div className="mt-4 grid gap-2">
-                <Button
-                  href={`tel:${BUSINESS.phoneE164}`}
-                  variant="secondary"
-                  size="md"
-                  ariaLabel={`Call ${BUSINESS.phoneDisplay}`}
-                >
-                  Call {BUSINESS.phoneDisplay}
-                </Button>
-                <Button
-                  href={BUSINESS.bookingUrl}
-                  variant="primary"
-                  size="md"
-                  ariaLabel="Book now"
-                >
-                  Book Now
-                </Button>
-              </div>
-            </nav>
-          </aside>
-        </div>,
-        document.body,
-      )
-    : null;
+              <Link
+                href="/privacy-policy"
+                onClick={() => setOpen(false)}
+                className="rounded-xl px-3 py-3 text-sm font-semibold text-black/70 hover:bg-black/5"
+              >
+                Privacy Policy
+              </Link>
+            </div>
 
-  return (
-    <>
-      {Trigger}
-      {Overlay}
-    </>
+            <div className="mt-6 grid gap-3">
+              <Button
+                href={`tel:${BUSINESS.phoneE164}`}
+                variant="secondary"
+                size="lg"
+                ariaLabel={`Call ${BUSINESS.phoneDisplay}`}
+              >
+                Call {BUSINESS.phoneDisplay}
+              </Button>
+              <Button
+                href="/contact"
+                variant="primary"
+                size="lg"
+                ariaLabel="Contact us"
+              >
+                Contact us
+              </Button>
+            </div>
+
+            <div className="mt-6 text-xs text-black/60">
+              {BUSINESS.addressText}
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </div>
   );
 }

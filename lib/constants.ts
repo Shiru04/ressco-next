@@ -1,52 +1,29 @@
-import { SocketAddress } from "net";
-
 export const BUSINESS = {
-  name: "GC Heating & Cooling",
-  phoneDisplay: "(800) 706-4822",
-  phone: "+18007064822",
-  phoneE164: "+18007064822",
-  bookingUrl:
-    "https://customer.dispatch.me/booking?account_id=37&org_id=257895",
+  name: "RESSCO Metals, Inc.",
 
-  // Keep these (often used in UI)
-  addressLine1: "6940 Knott Ave. Suite H",
-  cityStateZip: "Buena Park, CA 90621",
+  // Contact (screenshot)
+  phoneDisplay: "(562) 633-7047",
+  phoneE164: "+15626337047",
+  email: "sales@resscometals.com",
 
-  // ✅ This is what layout.tsx expects for JSON-LD
   address: {
-    street: "6940 Knott Ave. Suite H",
-    city: "Buena Park",
+    street: "1254 N Knollwood Cir",
+    city: "Anaheim",
     state: "CA",
-    zip: "90621",
+    zip: "92801",
   },
 
-  // ✅ Keep a formatted string for any UI spots that want one line
-  addressText: "6940 Knott Ave. Suite H, Buena Park, CA 90621",
+  addressText: "1254 N Knollwood Cir, Anaheim, CA 92801",
 
-  licenseLabel: "License # 794228",
-  trustLine: "Insured and Bonded",
-  serviceRegionShort: "Serving Los Angeles & Orange County",
-  hoursShort: "Mon - Fri | 8:30am - 4:30pm",
+  hoursShort: "Mon–Fri 6:00 am – 4:00 pm",
+  hoursLong: ["Mon–Fri: 6:00 am – 4:00 pm", "Sat: CLOSED", "Sun: CLOSED"],
 
-  // ✅ Optional, but layout.tsx references it, so define it to avoid undefined noise
   socials: [] as string[],
 };
 
 export const NAV = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
-  { href: "/resources", label: "Resources" },
+  { href: "/about", label: "About" },
+  { href: "/product-list", label: "Product List" },
   { href: "/contact", label: "Contact" },
-  { href: "/financing", label: "Financing" },
-  { href: "/promotions", label: "Promotions" },
-] as const;
-
-export const SERVICE_LINKS = [
-  { href: "/services/ac-repair", label: "Air Conditioning Repair" },
-  { href: "/services/heating-repair", label: "Heating Repair" },
-  { href: "/services/hvac-maintenance", label: "Maintenance" },
-  { href: "/services/ac-installation", label: "AC Installation" },
-  { href: "/services/commercial-hvac", label: "Commercial HVAC" },
-  { href: "/services/attic-insulation", label: "Attic Insulation" },
 ] as const;

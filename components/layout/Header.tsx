@@ -2,7 +2,6 @@ import Link from "next/link";
 import { BUSINESS, NAV } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { MobileMenu } from "./MobileMenu";
 
@@ -20,8 +19,8 @@ export function Header(props: { variant?: "default" | "landing" }) {
         >
           <span className="relative h-9 w-[140px] sm:h-10 sm:w-[160px]">
             <Image
-              src="/brand/logo-gc.svg"
-              alt="GC heating and cooling logo"
+              src="/brand/logo-ressco.svg"
+              alt="RESSCO Metals logo"
               fill
               priority
               sizes="(max-width: 640px) 140px, 160px"
@@ -33,7 +32,7 @@ export function Header(props: { variant?: "default" | "landing" }) {
         {/* Desktop nav */}
         {variant === "default" ? (
           <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold">
-            {NAV.slice(0, 5).map((item) => (
+            {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -43,25 +42,20 @@ export function Header(props: { variant?: "default" | "landing" }) {
               </Link>
             ))}
             <Link
-              href="/promotions"
-              className="text-brand-red hover:opacity-80"
+              href="/privacy-policy"
+              className="text-black/60 hover:text-black/80"
             >
-              Promotions
+              Privacy
             </Link>
           </nav>
         ) : (
           <div className="hidden lg:block text-sm font-semibold text-black/70">
-            Specials & Fast Booking
+            Industrial Sheet Metal & HVAC Supply
           </div>
         )}
 
         {/* Right side */}
-        <div
-          className={cn(
-            "flex items-center gap-2",
-            variant === "default" ? "" : "",
-          )}
-        >
+        <div className="flex items-center gap-2">
           <Button
             href={`tel:${BUSINESS.phoneE164}`}
             variant="secondary"
@@ -71,15 +65,14 @@ export function Header(props: { variant?: "default" | "landing" }) {
             {BUSINESS.phoneDisplay}
           </Button>
           <Button
-            href={BUSINESS.bookingUrl}
+            href="/contact"
             variant="primary"
             size="sm"
-            ariaLabel="Book now"
+            ariaLabel="Contact us"
           >
-            Book Now
+            Contact us
           </Button>
 
-          {/* Mobile menu trigger + drawer */}
           <MobileMenu variant={variant} />
         </div>
       </Container>
