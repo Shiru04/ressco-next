@@ -1,0 +1,29 @@
+{
+  "name": "gchc-next",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "predev": "tsx scripts/optimize-images.ts",
+    "dev": "next dev",
+    "prebuild": "tsx scripts/optimize-images.ts && tsx scripts/generate-sitemap.ts",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.1.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.14",
+    "tsx": "^4.21.0",
+    "typescript": "5.5.4",
+    "sharp": "^0.34.1"
+  }
+}
