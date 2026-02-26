@@ -5,9 +5,9 @@ import { BUSINESS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Financing | GC Heating & Cooling",
+  title: "Financing | RESSCO Metals — Sheet Metal Supply California",
   description:
-    "Explore flexible financing options for HVAC installation and upgrades in Los Angeles & Orange County.",
+    "RESSCO Metals offers flexible payment options for large orders and long-term supply contracts. Contact us to discuss your project.",
   path: "/financing",
 });
 
@@ -20,23 +20,19 @@ export default function FinancingPage() {
             FINANCING
           </div>
           <h1 className="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Financing Available
+            Flexible Payment Options
           </h1>
           <p className="mt-4 text-lg text-black/70">
-            We offer short and long term financing options for qualified
-            customers. If you’re planning an upgrade or a new system, we’ll help
-            you find a comfortable path forward.
+            For large orders and ongoing supply contracts, RESSCO Metals works
+            with customers to find payment arrangements that keep your projects
+            moving. Contact us to discuss what works for your business.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
-            <Button href={BUSINESS.bookingUrl} variant="primary" size="lg">
-              Book Onsite Consultation
+            <Button href="/contact" variant="primary" size="lg">
+              Contact Us
             </Button>
-            <Button
-              href={`tel:${BUSINESS.phoneE164}`}
-              variant="secondary"
-              size="lg"
-            >
+            <Button href={`tel:${BUSINESS.phoneE164}`} variant="secondary" size="lg">
               Call {BUSINESS.phoneDisplay}
             </Button>
           </div>
@@ -47,16 +43,16 @@ export default function FinancingPage() {
         <div className="grid gap-5 lg:grid-cols-3">
           {[
             {
-              title: "Clear options",
-              desc: "We explain equipment choices and what matters for comfort and efficiency.",
+              title: "Large order support",
+              desc: "We work with contractors on bulk orders and can discuss payment terms that fit your project timeline.",
             },
             {
-              title: "Budget-friendly upgrades",
-              desc: "Financing can make upgrades more accessible when timing matters.",
+              title: "Long-term contracts",
+              desc: "Ongoing supply agreements with predictable pricing and priority scheduling.",
             },
             {
-              title: "Fast scheduling",
-              desc: "Book online and we’ll confirm your appointment quickly.",
+              title: "Talk to us directly",
+              desc: "No automated forms — call or email and speak directly with our team about your needs.",
             },
           ].map((x) => (
             <Card key={x.title} className="p-6">
