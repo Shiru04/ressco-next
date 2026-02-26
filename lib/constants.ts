@@ -4,6 +4,7 @@ export const BUSINESS = {
   // Contact (screenshot)
   phoneDisplay: "(562) 633-7047",
   phoneE164: "+15626337047",
+  phone: "+15626337047",
   email: "sales@resscometals.com",
 
   address: {

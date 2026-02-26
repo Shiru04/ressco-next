@@ -16,19 +16,6 @@ export function FloatingCta() {
       >
         Call {BUSINESS.phoneDisplay}
       </a>
-
-      <a
-        href={BUSINESS.bookingUrl}
-        target="_blank"
-        rel="noreferrer"
-        className={cn(
-          "rounded-2xl bg-brand-black shadow-soft px-4 py-3",
-          "text-sm font-extrabold text-white hover:opacity-90",
-        )}
-        aria-label="Book now"
-      >
-        Book Now
-      </a>
     </div>
   );
 }
