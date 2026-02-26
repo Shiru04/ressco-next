@@ -9,73 +9,74 @@ export function Header(props: { variant?: "default" | "landing" }) {
   const variant = props.variant ?? "default";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/10 bg-white/80 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between gap-3">
+    <header className="top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur">
+      <div className="mx-auto w-full max-w-screen-2xl px-6 sm:px-10 lg:px-16 flex h-40 items-center justify-between gap-6">
         {/* Logo */}
         <Link
           href="/"
           className="flex items-center gap-3"
           aria-label={`${BUSINESS.name} Home`}
         >
-          <span className="relative h-9 w-[140px] sm:h-10 sm:w-[160px]">
-            <Image
+          <Image
               src="/brand/logo-ressco.svg"
               alt="RESSCO Metals logo"
-              fill
+              width={420}
+              height={100}
               priority
-              sizes="(max-width: 640px) 140px, 160px"
-              className="object-contain"
+              className="h-20 w-auto sm:h-24"
             />
-          </span>
         </Link>
 
         {/* Desktop nav */}
         {variant === "default" ? (
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold">
+          <nav className="hidden lg:flex items-center gap-8 text-base font-semibold">
             {NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-black/80 hover:text-black"
+                className="text-white/80 hover:text-white"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href="/privacy-policy"
-              className="text-black/60 hover:text-black/80"
+              className="text-white/50 hover:text-white/80"
             >
               Privacy
             </Link>
           </nav>
         ) : (
-          <div className="hidden lg:block text-sm font-semibold text-black/70">
+          <div className="hidden lg:block text-sm font-semibold text-white/70">
             Industrial Sheet Metal & HVAC Supply
           </div>
         )}
 
         {/* Right side */}
-        <div className="flex items-center gap-2">
-          <Button
-            href={`tel:${BUSINESS.phoneE164}`}
-            variant="secondary"
-            size="sm"
-            ariaLabel={`Call ${BUSINESS.phoneDisplay}`}
-          >
-            {BUSINESS.phoneDisplay}
-          </Button>
-          <Button
-            href="/contact"
-            variant="primary"
-            size="sm"
-            ariaLabel="Contact us"
-          >
-            Contact us
-          </Button>
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:flex flex-col xl:flex-row items-stretch xl:items-center gap-2">
+            <Button
+              href={`tel:${BUSINESS.phoneE164}`}
+              variant="secondary"
+              size="sm"
+              className="bg-white/10 text-white border-white/20 hover:bg-white/20 whitespace-nowrap"
+              ariaLabel={`Call ${BUSINESS.phoneDisplay}`}
+            >
+              {BUSINESS.phoneDisplay}
+            </Button>
+            <Button
+              href="/contact"
+              variant="primary"
+              size="sm"
+              ariaLabel="Contact us"
+            >
+              Contact us
+            </Button>
+          </div>
 
           <MobileMenu variant={variant} />
         </div>
-      </Container>
+      </div>
     </header>
   );
 }

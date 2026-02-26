@@ -66,8 +66,8 @@ export default async function ProductDetailPage({
           </h1>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button href="/product-list" variant="secondary" size="md">
-              Back to Product List
+            <Button href="/product-categories" variant="secondary" size="md">
+              Back to Products
             </Button>
             <Button href="/contact" variant="primary" size="md">
               Request / Order
@@ -87,8 +87,7 @@ export default async function ProductDetailPage({
                     <tr>
                       <th className="py-2 pr-4">SKU</th>
                       <th className="py-2 pr-4">Item name</th>
-                      <th className="py-2 pr-4">Product description</th>
-                      <th className="py-2 pr-0">Cost</th>
+                      <th className="py-2 pr-0">Product description</th>
                     </tr>
                   </thead>
                   <tbody className="text-black/80">
@@ -96,11 +95,8 @@ export default async function ProductDetailPage({
                       <tr key={s.id} className="border-t border-black/10">
                         <td className="py-2 pr-4 font-semibold">{s.sku}</td>
                         <td className="py-2 pr-4">{s.itemName || "-"}</td>
-                        <td className="py-2 pr-4">
-                          {s.productDescription || "-"}
-                        </td>
                         <td className="py-2 pr-0">
-                          {s.cost === null ? "-" : `$${s.cost.toFixed(2)}`}
+                          {s.productDescription || "-"}
                         </td>
                       </tr>
                     ))}

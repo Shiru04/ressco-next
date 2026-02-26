@@ -4,9 +4,9 @@ import { Card } from "@/components/ui/Card";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "About RESSCO Metals",
+  title: "About RESSCO Metals | Family-Owned Sheet Metal Fabrication Since 1996",
   description:
-    "Founded in 1996, RESSCO Metals is a family-owned company delivering high-quality HVAC and sheet metal products with dependable service.",
+    "RESSCO Metals is a family-owned sheet metal fabrication and HVAC supply company based in Anaheim, CA. Founded in 1996 by Edwin Tobar. Serving contractors across California for 25+ years.",
   path: "/about",
 });
 

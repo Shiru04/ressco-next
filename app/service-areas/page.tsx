@@ -2,9 +2,9 @@ import { buildMetadata } from "@/lib/seo";
 import ServiceAreasClient from "./ServiceAreasClient";
 
 export const metadata = buildMetadata({
-  title: "Service Areas | GC Heating & Cooling",
+  title: "Sheet Metal Supply Areas | RESSCO Metals Serves All California",
   description:
-    "Serving Los Angeles & Orange County with HVAC installation, repair, and maintenance. See our full service area coverage.",
+    "RESSCO Metals supplies HVAC sheet metal fabrication, galvanized ductwork, and custom parts to contractors across California — from Los Angeles to San Francisco.",
   path: "/service-areas",
 });
 

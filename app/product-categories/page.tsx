@@ -29,7 +29,7 @@ export default function ProductCategoriesIndexPage() {
 
         <Link
           href="/product-list"
-          className="text-sm font-semibold text-black/70 hover:text-black"
+          className="text-sm font-semibold text-black/70 hover:text-black underline underline-offset-4"
         >
           View all products →
         </Link>
@@ -62,13 +62,7 @@ export default function ProductCategoriesIndexPage() {
         ))}
       </div>
 
-      <div className="mt-10 text-sm text-black/60">
-        Tip: You can also browse all items in the{" "}
-        <Link href="/product-list" className="font-semibold hover:underline">
-          Product List
-        </Link>
-        .
-      </div>
+
     </Section>
   );
 }

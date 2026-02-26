@@ -4,9 +4,9 @@ import { REVIEW_BADGES, REVIEWS } from "@/lib/reviews";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Reviews | GC Heating & Cooling",
+  title: "Customer Reviews | RESSCO Metals — Sheet Metal & HVAC Supply California",
   description:
-    "Read verified customer reviews for GC Heating & Cooling across Los Angeles & Orange County.",
+    "See what HVAC contractors and fabricators across California say about RESSCO Metals. Trusted for quality, precision, and reliable delivery since 1996.",
   path: "/reviews",
 });
 
@@ -32,25 +32,25 @@ export default function ReviewsPage() {
             REVIEWS
           </div>
           <h1 className="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            What customers say
+            Trusted by Contractors Across California
           </h1>
           <p className="mt-4 text-lg text-black/70">
-            We’re proud to be trusted across Los Angeles and Orange County.
+            Since 1996, HVAC contractors and sheet metal fabricators across
+            California have relied on RESSCO Metals for quality products,
+            precision fabrication, and dependable service.
           </p>
         </div>
       </Section>
 
       <Section className="bg-brand-gray">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-4 sm:grid-cols-3">
           {REVIEW_BADGES.map((b) => (
             <Card key={b.label} className="p-4 text-center">
               <div className="text-sm font-extrabold">{b.label}</div>
               <div className="mt-2 text-3xl font-extrabold">
                 {b.rating.toFixed(1)}
               </div>
-              <div className="mt-1 text-xs text-black/60">
-                {b.count} reviews
-              </div>
+              <div className="mt-1 text-xs text-black/60">{b.count} reviews</div>
             </Card>
           ))}
         </div>
@@ -62,7 +62,7 @@ export default function ReviewsPage() {
                 <div>
                   <div className="font-extrabold">{r.name}</div>
                   <div className="text-sm text-black/60">
-                    {r.source} • {r.date}
+                    {r.source} · {r.date}
                   </div>
                 </div>
                 <Stars rating={r.rating} />
@@ -71,6 +71,10 @@ export default function ReviewsPage() {
             </Card>
           ))}
         </div>
+
+        <p className="mt-8 text-sm text-black/50 text-center">
+          * Reviews are representative examples. Real customer reviews available on Google and Yelp.
+        </p>
       </Section>
     </>
   );

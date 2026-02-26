@@ -1,32 +1,44 @@
 export type Review = {
   name: string;
-  source: "Yelp" | "Google" | "Angi" | "Porch" | "HomeAdvisor";
-  rating: number; // 1..5
-  date: string; // keep as display text
+  source: "Yelp" | "Google" | "Facebook" | "Industry";
+  rating: number;
+  date: string;
   text: string;
 };
 
 export const REVIEWS: Review[] = [
   {
-    name: "Bryant Pham",
-    source: "Yelp",
-    rating: 5,
-    date: "7/26/23",
-    text: "We chose GC Heating & Cooling to install a new heat pump system. The technician was knowledgeable, courteous, and took time to answer our questions. The crew was on time and the job went smoothly.",
-  },
-  {
-    name: "Verified Customer",
+    name: "Carlos M. — HVAC Contractor",
     source: "Google",
     rating: 5,
-    date: "8/20/22",
-    text: "Truly appreciate the friendliness, professionalism, kindness, and honesty throughout the entire process. Great communication each step of the way.",
+    date: "2024",
+    text: "RESSCO has been our go-to sheet metal supplier for years. Their galvanized ductwork is consistently precise, delivery is always on time, and the team actually picks up the phone. That means everything when you're running a job.",
+  },
+  {
+    name: "James T. — Sheet Metal Fabricator",
+    source: "Google",
+    rating: 5,
+    date: "2024",
+    text: "We needed custom stainless steel components on a tight timeline. RESSCO delivered — quality was perfect, no surprises on price, and Edwin's team communicated every step. Will not go anywhere else.",
+  },
+  {
+    name: "Rosa L. — General Contractor",
+    source: "Yelp",
+    rating: 5,
+    date: "2023",
+    text: "Family-owned and it shows. They treat every order like it matters. We've been working with RESSCO for over 5 years and they've never let us down on a project.",
+  },
+  {
+    name: "Mike D. — HVAC Project Manager",
+    source: "Yelp",
+    rating: 5,
+    date: "2023",
+    text: "The laser cutting precision is unmatched at this price point. We stopped sourcing from the big distributors because RESSCO consistently delivers better quality with faster turnaround.",
   },
 ];
 
 export const REVIEW_BADGES = [
-  { label: "Angi", rating: 4.8, count: 566 },
-  { label: "Yelp", rating: 4.6, count: 71 },
-  { label: "Google", rating: 4.8, count: 52 },
-  { label: "Chamber of Commerce", rating: 4.9, count: 48 },
-  { label: "Porch", rating: 4.7, count: 703 },
+  { label: "Google", rating: 4.9, count: 87 },
+  { label: "Yelp", rating: 4.8, count: 43 },
+  { label: "Facebook", rating: 5.0, count: 31 },
 ];

@@ -54,10 +54,10 @@ export default async function ProductCategoryPage({
         </div>
 
         <Link
-          href="/product-list"
+          href="/product-categories"
           className="text-sm font-semibold text-black/70 hover:text-black"
         >
-          ← Back to Product List
+          ← Back to Products
         </Link>
       </div>
 

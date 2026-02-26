@@ -7,7 +7,9 @@ export default {
       colors: {
         brand: {
           primary: "hsl(var(--brand-primary))",
+          red: "hsl(var(--brand-primary))",
           dark: "hsl(var(--brand-dark))",
+          black: "hsl(var(--brand-dark))",
           gray: "hsl(var(--brand-gray))",
           white: "hsl(var(--brand-white))",
         },

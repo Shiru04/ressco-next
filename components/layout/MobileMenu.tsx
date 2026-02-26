@@ -22,7 +22,7 @@ export function MobileMenu(props: { variant?: "default" | "landing" }) {
   return (
     <div className="lg:hidden">
       <button
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-black shadow-soft"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white"
         aria-label="Open menu"
         aria-controls={panelId}
         aria-expanded={open}

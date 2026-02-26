@@ -112,8 +112,6 @@ async function runJob(job: ManifestJob) {
   const baseNoExt = withoutExt(canonicalFromPublic); // hero/home-hero
 
   for (const w of widths) {
-    if (w >= meta.width) continue;
-
     const outWebp = path.join(PUBLIC_DIR, `${baseNoExt}-w${w}.webp`);
     const outAvif = path.join(PUBLIC_DIR, `${baseNoExt}-w${w}.avif`);
 

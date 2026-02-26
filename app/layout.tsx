@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { EdwinQuote } from "@/components/sections/EdwinQuote";
 import { BUSINESS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import { Tracking } from "@/components/analytics/Tracking";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${BUSINESS.name} | HVAC Installation, Repair & Maintenance`,
+  title: `${BUSINESS.name} | Sheet Metal Fabrication & HVAC Supply — California`,
   description:
-    "GC Heating & Cooling provides fast, friendly HVAC installation, repair, and maintenance across Los Angeles & Orange County. Call now for service.",
+    "RESSCO Metals supplies custom sheet metal fabrication, HVAC ductwork, galvanized steel, and precision parts to contractors across California. Based in Anaheim, CA since 1996.",
   path: "/",
 });
 
@@ -26,20 +27,14 @@ function localBusinessJsonLd() {
   // Keep it conservative + consistent (no undefined fields)
   const jsonLd: Record<string, any> = {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
+    "@type": "LocalBusiness",
     name: BUSINESS.name,
     telephone: BUSINESS.phone,
     url,
     areaServed: [
-      {
-        "@type": "AdministrativeArea",
-        name: "Los Angeles County",
-      },
-      {
-        "@type": "AdministrativeArea",
-        name: "Orange County",
-      },
+      { "@type": "AdministrativeArea", name: "California" },
     ],
+    description: "Family-owned sheet metal fabrication and HVAC supply company based in Anaheim, CA. Serving contractors across California since 1996.",
     address: BUSINESS.address
       ? {
           "@type": "PostalAddress",
@@ -85,6 +80,7 @@ export default function RootLayout({
         </a>
         <Header />
         <main>{children}</main>
+        <EdwinQuote />
         <Footer />
 
         <script

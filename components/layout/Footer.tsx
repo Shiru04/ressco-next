@@ -5,7 +5,7 @@ import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 
 export function Footer() {
   return (
-    <footer className="relative mt-16 overflow-hidden border-t border-black/10">
+    <footer className="relative overflow-hidden border-t border-black/10">
       <div className="absolute inset-0">
         <ResponsiveImage
           srcBase={"/brand/footer-metal".replace(".webp", "")}
