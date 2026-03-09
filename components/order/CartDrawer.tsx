@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useOrder, type CatalogItem, type FabricationItem } from "@/app/order/context/OrderContext";
 import { FIELD_LABELS } from "@/app/order/lib/constants";
 import { Button } from "@/components/ui/Button";
@@ -121,8 +122,8 @@ export default function CartDrawer() {
       {/* Trigger button */}
       <CartButton onClick={() => setOpen(true)} itemCount={itemCount} />
 
-      {/* Drawer overlay + panel */}
-      {open && (
+      {/* Drawer overlay + panel — portaled to body to escape header stacking context */}
+      {open && createPortal(
         <div className="fixed inset-0 z-[60]">
           {/* Backdrop */}
           <button
@@ -192,7 +193,8 @@ export default function CartDrawer() {
               </div>
             )}
           </div>
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   );
