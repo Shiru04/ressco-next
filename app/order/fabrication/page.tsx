@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -9,17 +10,33 @@ import { FIELD_LABELS, inputClass } from "../lib/constants";
 
 /* ── Types for API catalog ──────────────────────────────── */
 
-type PieceField = {
-  key: string;
-  label?: string;
-};
-
 type PieceType = {
   typeCode: string;
   name: string;
+  diagram: string;
   shape: "rectangular" | "round";
-  fields: PieceField[];
+  fields: string[];
 };
+
+/* ── Diagram image helper ───────────────────────────────── */
+
+function DiagramImage({ diagram, name }: { diagram: string; name: string }) {
+  const [error, setError] = useState(false);
+  if (error) return null;
+
+  return (
+    <div className="relative aspect-square w-full bg-black/[0.02] rounded-xl overflow-hidden">
+      <Image
+        src={`/takeoff-icons/${diagram}.png`}
+        alt={`${name} diagram`}
+        fill
+        sizes="(min-width: 1024px) 280px, (min-width: 640px) 240px, 100vw"
+        className="object-contain p-3"
+        onError={() => setError(true)}
+      />
+    </div>
+  );
+}
 
 /* ── Piece form ─────────────────────────────────────────── */
 
@@ -91,24 +108,30 @@ function PieceForm({
         </button>
       </div>
 
-      {/* Measurement fields */}
-      <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        {piece.fields.map((f) => (
-          <div key={f.key}>
-            <label className="block text-xs font-extrabold tracking-wide text-black/60">
-              {FIELD_LABELS[f.key] ?? f.label ?? f.key}
-            </label>
-            <input
-              type="number"
-              step="any"
-              min={0}
-              value={measurements[f.key] ?? ""}
-              onChange={(e) => updateMeasurement(f.key, e.target.value)}
-              placeholder="0"
-              className={`mt-2 ${inputClass}`}
-            />
-          </div>
-        ))}
+      {/* Diagram + measurements side by side */}
+      <div className="mt-5 grid gap-6 sm:grid-cols-2">
+        {/* Diagram */}
+        <DiagramImage diagram={piece.diagram} name={piece.name} />
+
+        {/* Measurement fields */}
+        <div className="grid gap-4 content-start">
+          {piece.fields.map((key) => (
+            <div key={key}>
+              <label className="block text-xs font-extrabold tracking-wide text-black/60">
+                {FIELD_LABELS[key] ?? key}
+              </label>
+              <input
+                type="number"
+                step="any"
+                min={0}
+                value={measurements[key] ?? ""}
+                onChange={(e) => updateMeasurement(key, e.target.value)}
+                placeholder="0"
+                className={`mt-2 ${inputClass}`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Qty + gauge + material */}
@@ -229,76 +252,79 @@ export default function FabricationPage() {
   );
 
   return (
-    <>
-      <Section>
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-          Custom Fabrication
-        </h1>
-        <p className="mt-2 text-sm text-black/60">
-          Specify exact dimensions for custom sheet metal pieces.
-        </p>
+    <Section>
+      <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+        Custom Fabrication
+      </h1>
+      <p className="mt-2 text-sm text-black/60">
+        Specify exact dimensions for custom sheet metal pieces.
+      </p>
 
-        {/* ── Shape tabs ────────────────────────────────────── */}
-        <div className="mt-6 flex gap-2">
-          {(["rectangular", "round"] as const).map((shape) => (
-            <button
-              key={shape}
-              onClick={() => {
-                setTab(shape);
-                setActivePiece(null);
-              }}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold border transition ${
-                tab === shape
-                  ? "bg-black text-white border-black"
-                  : "bg-white text-black/60 border-black/10 hover:border-black/30"
-              }`}
-            >
-              {shape === "rectangular" ? "Rectangular" : "Round"}
-            </button>
-          ))}
+      {/* ── Shape tabs ────────────────────────────────────── */}
+      <div className="mt-6 flex gap-2">
+        {(["rectangular", "round"] as const).map((shape) => (
+          <button
+            key={shape}
+            onClick={() => {
+              setTab(shape);
+              setActivePiece(null);
+            }}
+            className={`px-4 py-2 rounded-xl text-sm font-semibold border transition ${
+              tab === shape
+                ? "bg-black text-white border-black"
+                : "bg-white text-black/60 border-black/10 hover:border-black/30"
+            }`}
+          >
+            {shape === "rectangular" ? "Rectangular" : "Round"}
+          </button>
+        ))}
+      </div>
+
+      {/* ── Loading / error ───────────────────────────────── */}
+      {loading && (
+        <div className="mt-8 text-sm text-black/50">
+          Loading fabrication catalog...
         </div>
+      )}
+      {error && (
+        <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          {error}
+        </div>
+      )}
 
-        {/* ── Loading / error ───────────────────────────────── */}
-        {loading && (
-          <div className="mt-8 text-sm text-black/50">
-            Loading fabrication catalog...
-          </div>
-        )}
-        {error && (
-          <div className="mt-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-            {error}
-          </div>
-        )}
+      {/* ── Active piece form ─────────────────────────────── */}
+      {activePiece && (
+        <div className="mt-6">
+          <PieceForm
+            key={activePiece.typeCode}
+            piece={activePiece}
+            onDone={() => setActivePiece(null)}
+          />
+        </div>
+      )}
 
-        {/* ── Active piece form ─────────────────────────────── */}
-        {activePiece && (
-          <div className="mt-6">
-            <PieceForm
-              key={activePiece.typeCode}
-              piece={activePiece}
-              onDone={() => setActivePiece(null)}
-            />
-          </div>
-        )}
-
-        {/* ── Piece type grid ───────────────────────────────── */}
-        {!loading && !error && !activePiece && (
-          <>
-            {filteredPieces.length === 0 ? (
-              <div className="mt-8 rounded-2xl border border-black/10 bg-white p-6 text-sm text-black/70">
-                No {tab} piece types found.
-              </div>
-            ) : (
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {filteredPieces.map((p) => (
-                  <Card
-                    key={p.typeCode}
-                    className="cursor-pointer p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+      {/* ── Piece type grid ───────────────────────────────── */}
+      {!loading && !error && !activePiece && (
+        <>
+          {filteredPieces.length === 0 ? (
+            <div className="mt-8 rounded-2xl border border-black/10 bg-white p-6 text-sm text-black/70">
+              No {tab} piece types found.
+            </div>
+          ) : (
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {filteredPieces.map((p) => (
+                <Card
+                  key={p.typeCode}
+                  className="cursor-pointer overflow-hidden transition hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <button
+                    onClick={() => setActivePiece(p)}
+                    className="w-full text-left"
                   >
-                    <button
-                      onClick={() => setActivePiece(p)}
-                      className="w-full text-left"
-                    >
+                    {/* Diagram image */}
+                    <DiagramImage diagram={p.diagram} name={p.name} />
+
+                    <div className="p-5">
                       <div className="text-base font-extrabold">
                         {p.name}
                       </div>
@@ -309,15 +335,14 @@ export default function FabricationPage() {
                       <div className="mt-3 text-sm text-black/50 hover:text-brand-red transition">
                         Configure &amp; add &rarr;
                       </div>
-                    </button>
-                  </Card>
-                ))}
-              </div>
-            )}
-          </>
-        )}
-      </Section>
-
-    </>
+                    </div>
+                  </button>
+                </Card>
+              ))}
+            </div>
+          )}
+        </>
+      )}
+    </Section>
   );
 }
