@@ -208,11 +208,12 @@ export default function FabricationPage() {
     fetch(`${url}/api/weborders/catalog`)
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        // API may return { types: [...] } or an array directly
-        const types: PieceType[] = Array.isArray(data)
-          ? data
-          : data.types ?? data.pieces ?? [];
+        const json = await res.json();
+        // API returns { ok, data: { types: [...] } }
+        const payload = json.data ?? json;
+        const types: PieceType[] = Array.isArray(payload)
+          ? payload
+          : payload.types ?? payload.pieces ?? [];
         setPieces(types);
       })
       .catch((err) => {
