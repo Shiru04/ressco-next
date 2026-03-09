@@ -19,23 +19,13 @@ const nextConfig: NextConfig = {
     imageSizes: [320, 420, 480, 768],
   },
 
-  // Minimize JavaScript bundles with SWC (default in Next 13+, explicit for clarity)
-  swcMinify: true,
-
   // Reduce build output noise
   logging: {
     fetches: { fullUrl: false },
   },
 
-  // Webpack optimizations for faster builds
-  webpack: (config, { isServer }) => {
-    // Ignore optional/peer-dep warnings that slow the build log
-    config.ignoreWarnings = [
-      ...(config.ignoreWarnings ?? []),
-      { module: /node_modules/ },
-    ];
-    return config;
-  },
+  // Turbopack is default in Next.js 16 — empty config silences the webpack warning
+  turbopack: {},
 
   // Enable React strict mode for development quality
   reactStrictMode: true,
