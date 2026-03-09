@@ -135,13 +135,14 @@ async function main() {
     .filter((r) => (r["Status"] || "").toUpperCase() === "PUBLISHED")
     .map((r) => {
       const pathStr = r["Product Categories (Item)"] || "";
-      const slug = slugFromPath(pathStr);
+      const slugRaw = slugFromPath(pathStr);
+      const slug = safeSlug(slugRaw);
       return {
         id: r["ID"] || "",
         title: r["Title"] || "",
-        path: pathStr,
+        path: `/product-categories/${slug}`,
         slug,
-        imagePlaceholder: `/products/categories/${safeSlug(slug)}.webp`,
+        imagePlaceholder: `/products/categories/${slug}.webp`,
       };
     })
     .filter((c) => c.slug && c.path);

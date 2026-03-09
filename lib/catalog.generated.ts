@@ -35,29 +35,29 @@ export const CATEGORIES: CatalogCategory[] = [
   {
     "id": "01763a64-ba0c-4a80-ac80-cab6c3d0e426",
     "title": "Sealants & Tapes",
-    "path": "/product-categories/sealants-%26-tapes",
-    "slug": "sealants-%26-tapes",
+    "path": "/product-categories/sealants-and-tapes",
+    "slug": "sealants-and-tapes",
     "imagePlaceholder": "/products/categories/sealants-and-tapes.webp"
   },
   {
     "id": "0ebcc58d-5925-4824-a8c7-7d0c87abb6da",
     "title": "Equipment & Accessories",
-    "path": "/product-categories/equipment-%26-accessories",
-    "slug": "equipment-%26-accessories",
+    "path": "/product-categories/equipment-and-accessories",
+    "slug": "equipment-and-accessories",
     "imagePlaceholder": "/products/categories/equipment-and-accessories.webp"
   },
   {
     "id": "3657abb4-bd68-4e1d-8c17-86ad7773ead4",
     "title": "Elbows & Fittings",
-    "path": "/product-categories/elbows-%26-fittings",
-    "slug": "elbows-%26-fittings",
+    "path": "/product-categories/elbows-and-fittings",
+    "slug": "elbows-and-fittings",
     "imagePlaceholder": "/products/categories/elbows-and-fittings.webp"
   },
   {
     "id": "4a837012-97fb-4d8e-8e32-719924f903a9",
     "title": "Reducers & Collars",
-    "path": "/product-categories/reducers-%26-collars",
-    "slug": "reducers-%26-collars",
+    "path": "/product-categories/reducers-and-collars",
+    "slug": "reducers-and-collars",
     "imagePlaceholder": "/products/categories/reducers-and-collars.webp"
   },
   {
@@ -70,15 +70,15 @@ export const CATEGORIES: CatalogCategory[] = [
   {
     "id": "66bc596e-6594-46ec-873b-fbb6f227aba1",
     "title": "Boot Boxes & Transitions",
-    "path": "/product-categories/boot-boxes-%26-transitions",
-    "slug": "boot-boxes-%26-transitions",
+    "path": "/product-categories/boot-boxes-and-transitions",
+    "slug": "boot-boxes-and-transitions",
     "imagePlaceholder": "/products/categories/boot-boxes-and-transitions.webp"
   },
   {
     "id": "96b74d10-db4e-4f6a-a090-bc4176dfd450",
     "title": "Vent Caps & Flashings",
-    "path": "/product-categories/vent-caps-%26-flashings",
-    "slug": "vent-caps-%26-flashings",
+    "path": "/product-categories/vent-caps-and-flashings",
+    "slug": "vent-caps-and-flashings",
     "imagePlaceholder": "/products/categories/vent-caps-and-flashings.webp"
   },
   {
@@ -98,15 +98,15 @@ export const CATEGORIES: CatalogCategory[] = [
   {
     "id": "a3a56b0f-8b8b-4576-8628-2ac5e51d8000",
     "title": "Connectors & Hardware",
-    "path": "/product-categories/connectors-%26-hardware",
-    "slug": "connectors-%26-hardware",
+    "path": "/product-categories/connectors-and-hardware",
+    "slug": "connectors-and-hardware",
     "imagePlaceholder": "/products/categories/connectors-and-hardware.webp"
   },
   {
     "id": "b98eb550-97aa-44d1-b9a7-a55edece17bf",
     "title": "Airflow Control & Dampers",
-    "path": "/product-categories/airflow-control-%26-dampers",
-    "slug": "airflow-control-%26-dampers",
+    "path": "/product-categories/airflow-control-and-dampers",
+    "slug": "airflow-control-and-dampers",
     "imagePlaceholder": "/products/categories/airflow-control-and-dampers.webp"
   },
   {
@@ -119,8 +119,8 @@ export const CATEGORIES: CatalogCategory[] = [
   {
     "id": "c7be793f-e3e9-441f-853a-3a8e2b3c7fb3",
     "title": "Pipe & Riser Components",
-    "path": "/product-categories/pipe-%26-riser-components",
-    "slug": "pipe-%26-riser-components",
+    "path": "/product-categories/pipe-and-riser-components",
+    "slug": "pipe-and-riser-components",
     "imagePlaceholder": "/products/categories/pipe-and-riser-components.webp"
   }
 ] as any;
@@ -136,7 +136,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/riser-elbow-90-flat.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -150,7 +150,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/combustion-vent-cap.webp",
     "categorySlugs": [
-      "vent-caps-%26-flashings"
+      "vent-caps-and-flashings"
     ]
   },
   {
@@ -164,7 +164,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/straight-boot-box.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -178,7 +178,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/boot-box.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -192,7 +192,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/flashing.webp",
     "categorySlugs": [
-      "vent-caps-%26-flashings"
+      "vent-caps-and-flashings"
     ]
   },
   {
@@ -206,7 +206,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/china-cap.webp",
     "categorySlugs": [
-      "vent-caps-%26-flashings"
+      "vent-caps-and-flashings"
     ]
   },
   {
@@ -220,7 +220,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/elbow-90.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -234,7 +234,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/plenum.webp",
     "categorySlugs": [
-      "equipment-%26-accessories"
+      "equipment-and-accessories"
     ]
   },
   {
@@ -248,7 +248,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/twist-collar-w-damper-and-scoop.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -262,7 +262,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/register-box.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -318,7 +318,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/dove-tail-collar.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -332,7 +332,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/s-cleat-flat-s.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -346,7 +346,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/side-tab.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -360,7 +360,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/pg.webp",
     "categorySlugs": [
-      "equipment-%26-accessories"
+      "equipment-and-accessories"
     ]
   },
   {
@@ -374,7 +374,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/line-set-cover.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -388,7 +388,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/reducer-sure-fit.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -402,7 +402,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/drive.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -430,7 +430,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/duct-ties.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -444,7 +444,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/turning-vanes.webp",
     "categorySlugs": [
-      "airflow-control-%26-dampers"
+      "airflow-control-and-dampers"
     ]
   },
   {
@@ -458,7 +458,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/wall-cap.webp",
     "categorySlugs": [
-      "vent-caps-%26-flashings"
+      "vent-caps-and-flashings"
     ]
   },
   {
@@ -472,7 +472,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/stack-head-boot-box.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -486,7 +486,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/riser-elbow-45-standard.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -514,7 +514,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/elbow-45.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -556,7 +556,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/volume-damper-w-3-8-rod-and-1-stand-off.webp",
     "categorySlugs": [
-      "airflow-control-%26-dampers"
+      "airflow-control-and-dampers"
     ]
   },
   {
@@ -570,7 +570,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/t-top.webp",
     "categorySlugs": [
-      "vent-caps-%26-flashings"
+      "vent-caps-and-flashings"
     ]
   },
   {
@@ -584,7 +584,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/twist-collar-w-damper.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -598,7 +598,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/tee-wye.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -654,7 +654,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/riser-pipe.webp",
     "categorySlugs": [
-      "pipe-%26-riser-components"
+      "pipe-and-riser-components"
     ]
   },
   {
@@ -668,7 +668,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/furnace-stand.webp",
     "categorySlugs": [
-      "equipment-%26-accessories"
+      "equipment-and-accessories"
     ]
   },
   {
@@ -682,7 +682,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/riser-end-cap.webp",
     "categorySlugs": [
-      "pipe-%26-riser-components"
+      "pipe-and-riser-components"
     ]
   },
   {
@@ -696,7 +696,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/ceiling-box.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -710,7 +710,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/duct-board-collar.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -724,7 +724,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/twist-collar-spin-in-collar.webp",
     "categorySlugs": [
-      "reducers-%26-collars"
+      "reducers-and-collars"
     ]
   },
   {
@@ -738,7 +738,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/flex-connector.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -752,7 +752,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/1-circle-lined-wye.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -780,7 +780,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/pancake-taper-cookie-cutter.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -794,7 +794,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/conductor-pipe.webp",
     "categorySlugs": [
-      "pipe-%26-riser-components"
+      "pipe-and-riser-components"
     ]
   },
   {
@@ -808,7 +808,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/riser-elbow-45-standard.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -822,7 +822,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/sealers-and-adhesives.webp",
     "categorySlugs": [
-      "sealants-%26-tapes"
+      "sealants-and-tapes"
     ]
   },
   {
@@ -850,7 +850,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/saddle-wye.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -864,7 +864,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/drain-pan.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -878,7 +878,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/standing-s.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -892,7 +892,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/hanger-strap.webp",
     "categorySlugs": [
-      "connectors-%26-hardware"
+      "connectors-and-hardware"
     ]
   },
   {
@@ -906,7 +906,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/duct-foil-tapes.webp",
     "categorySlugs": [
-      "sealants-%26-tapes"
+      "sealants-and-tapes"
     ]
   },
   {
@@ -920,7 +920,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/return-air-can.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
@@ -934,7 +934,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/end-cap.webp",
     "categorySlugs": [
-      "equipment-%26-accessories"
+      "equipment-and-accessories"
     ]
   },
   {
@@ -948,7 +948,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/1-circle-lined-elbow.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -962,7 +962,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/swamp-cooler-diffuser.webp",
     "categorySlugs": [
-      "equipment-%26-accessories"
+      "equipment-and-accessories"
     ]
   },
   {
@@ -976,7 +976,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/riser-elbow-45-flat.webp",
     "categorySlugs": [
-      "elbows-%26-fittings"
+      "elbows-and-fittings"
     ]
   },
   {
@@ -990,7 +990,7 @@ export const PRODUCTS: CatalogProduct[] = [
     ],
     "imagePlaceholder": "/products/items/cone-boot.webp",
     "categorySlugs": [
-      "boot-boxes-%26-transitions"
+      "boot-boxes-and-transitions"
     ]
   },
   {
