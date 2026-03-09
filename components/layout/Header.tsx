@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { BUSINESS, NAV } from "@/lib/constants";
-import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import { MobileMenu } from "./MobileMenu";
+import CartDrawer from "@/components/order/CartDrawer";
 
 export function Header(props: { variant?: "default" | "landing" }) {
   const variant = props.variant ?? "default";
@@ -54,6 +54,8 @@ export function Header(props: { variant?: "default" | "landing" }) {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
+          <CartDrawer />
+
           <div className="hidden lg:flex flex-col xl:flex-row items-stretch xl:items-center gap-2">
             <Button
               href={`tel:${BUSINESS.phoneE164}`}

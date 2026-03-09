@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 
 type Product = {
@@ -180,6 +181,16 @@ export default function ProductListClientGrid(props: {
           ))}
         </div>
       )}
+      {/* ── Custom Fabrication CTA ───────────────────────────── */}
+      <div className="mt-10 rounded-2xl border border-black/10 bg-white p-8 shadow-soft text-center">
+        <h3 className="text-xl font-extrabold">Need Custom Fabrication?</h3>
+        <p className="mt-2 text-sm text-black/60">
+          Specify exact dimensions for rectangular or round ductwork pieces — built to your specs.
+        </p>
+        <Button href="/order/fabrication" variant="primary" size="md" className="mt-5">
+          Custom Fabrication
+        </Button>
+      </div>
     </>
   );
 }

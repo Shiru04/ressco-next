@@ -54,8 +54,8 @@ function ConfirmationContent() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button href="/order/catalog" variant="primary" size="md">
-            Browse Catalog
+          <Button href="/product-list" variant="primary" size="md">
+            Browse Products
           </Button>
           <Button href="/" variant="secondary" size="md">
             Back to Home

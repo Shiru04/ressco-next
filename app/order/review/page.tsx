@@ -236,8 +236,8 @@ export default function ReviewPage() {
           <Card className="p-8 text-center">
             <p className="text-sm text-black/60">Your order is empty.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Button href="/order/catalog" variant="primary" size="sm">
-                Browse Catalog
+              <Button href="/product-list" variant="primary" size="sm">
+                Browse Products
               </Button>
               <Button href="/order/fabrication" variant="secondary" size="sm">
                 Custom Fabrication
@@ -291,8 +291,8 @@ export default function ReviewPage() {
 
             {/* Add more */}
             <div className="flex flex-wrap gap-3">
-              <Button href="/order/catalog" variant="secondary" size="sm">
-                + Add Catalog Items
+              <Button href="/product-list" variant="secondary" size="sm">
+                + Add Products
               </Button>
               <Button href="/order/fabrication" variant="secondary" size="sm">
                 + Add Fabrication

@@ -6,6 +6,7 @@ import { EdwinQuote } from "@/components/sections/EdwinQuote";
 import { BUSINESS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 import { Tracking } from "@/components/analytics/Tracking";
+import { OrderProvider } from "@/app/order/context/OrderContext";
 
 export const metadata: Metadata = buildMetadata({
   title: `${BUSINESS.name} | Sheet Metal Fabrication & HVAC Supply — California`,
@@ -78,10 +79,12 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <OrderProvider>
         <Header />
         <main>{children}</main>
         <EdwinQuote />
         <Footer />
+        </OrderProvider>
 
         <script
           type="application/ld+json"

@@ -42,7 +42,7 @@ export default function OrderPage() {
           <p className="mt-2 text-sm text-black/60">
             Standard ductwork, fittings, accessories and more — ready to ship.
           </p>
-          <Button href="/order/catalog" className="mt-6 w-full" size="lg">
+          <Button href="/product-list" className="mt-6 w-full" size="lg">
             Browse Catalog
           </Button>
         </Card>

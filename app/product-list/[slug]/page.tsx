@@ -9,6 +9,7 @@ import {
   getProductByRouteSlug,
   getSkusForProductSafeSlug,
 } from "@/lib/catalog-helpers";
+import AddToOrderButton from "@/components/order/AddToOrderButton";
 
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slugSafe }));
@@ -69,9 +70,14 @@ export default async function ProductDetailPage({
             <Button href="/product-categories" variant="secondary" size="md">
               Back to Products
             </Button>
-            <Button href="/contact" variant="primary" size="md">
-              Request / Order
-            </Button>
+          </div>
+
+          {/* Add to Order */}
+          <div className="mt-6">
+            <AddToOrderButton
+              productTitle={product.title}
+              productSlugSafe={product.slugSafe}
+            />
           </div>
 
           <div className="mt-8">

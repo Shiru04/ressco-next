@@ -191,7 +191,6 @@ function PieceForm({
 /* ── Main fabrication page ──────────────────────────────── */
 
 export default function FabricationPage() {
-  const { itemCount } = useOrder();
   const [pieces, setPieces] = useState<PieceType[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -318,20 +317,6 @@ export default function FabricationPage() {
         )}
       </Section>
 
-      {/* ── Sticky cart bar ─────────────────────────────────── */}
-      {itemCount > 0 && (
-        <div className="fixed bottom-0 inset-x-0 z-40 border-t border-black/10 bg-white/95 backdrop-blur-sm shadow-soft">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-            <span className="text-sm font-semibold text-black/70">
-              <span className="text-brand-primary">{itemCount}</span>{" "}
-              {itemCount === 1 ? "item" : "items"} in your order
-            </span>
-            <Button href="/order/review" variant="primary" size="sm">
-              Review Order
-            </Button>
-          </div>
-        </div>
-      )}
     </>
   );
 }

@@ -20,6 +20,15 @@ export default {
       borderRadius: {
         xl2: "1.25rem",
       },
+      keyframes: {
+        "slide-in-right": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        "slide-in-right": "slide-in-right 0.25s ease-out",
+      },
     },
   },
   plugins: [],
