@@ -1,6 +1,15 @@
+// ── Expand libuv thread pool BEFORE any imports that use it ──────────
+import os from "node:os";
+const CPUS = os.cpus().length;
+const MAX_CONCURRENCY = Math.max(1, Math.min(CPUS, 6));
+process.env.UV_THREADPOOL_SIZE = String(Math.max(4, MAX_CONCURRENCY));
+
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
+
+// ── CLI flags ────────────────────────────────────────────────────────
+const SKIP_AVIF = process.argv.includes("--skip-avif");
 
 type ManifestJob = {
   inputFromPublic: string; // canonical path, usually .webp
@@ -9,10 +18,43 @@ type ManifestJob = {
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
-// GC-style widths (ajusta si tu repo usa otros)
 const DEFAULT_WIDTHS = [320, 480, 640, 960, 1200, 1600];
 
 const INPUT_EXTS = [".webp", ".jpg", ".jpeg", ".png"];
+
+// Threshold (px) below which an image is considered a "thumbnail" and
+// gets lower AVIF effort for faster encoding.
+const AVIF_LARGE_THRESHOLD = 800;
+
+// ── Concurrency control ─────────────────────────────────────────────
+async function runParallel<T>(
+  items: T[],
+  fn: (item: T) => Promise<void>,
+  concurrency: number,
+): Promise<void> {
+  let idx = 0;
+  const errors: Error[] = [];
+
+  async function worker() {
+    while (idx < items.length) {
+      const i = idx++;
+      try {
+        await fn(items[i]);
+      } catch (err) {
+        errors.push(err instanceof Error ? err : new Error(String(err)));
+      }
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(concurrency, items.length) }, () => worker());
+  await Promise.all(workers);
+
+  if (errors.length > 0) {
+    throw new AggregateError(errors, `${errors.length} image job(s) failed`);
+  }
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────
 
 function exists(p: string) {
   try {
@@ -30,7 +72,6 @@ function withoutExt(p: string) {
 /**
  * Given a canonical manifest input (e.g. hero/home-hero.webp),
  * find an existing file in public with any supported extension.
- * Priority: webp, jpg, jpeg, png
  */
 function resolveInputAbs(canonicalFromPublic: string) {
   const canonicalAbs = path.join(PUBLIC_DIR, canonicalFromPublic);
@@ -55,39 +96,42 @@ async function ensureCanonicalWebp(
   const canonicalAbs = path.join(PUBLIC_DIR, canonicalFromPublic);
   if (exists(canonicalAbs)) return canonicalAbs;
 
-  // Create canonical .webp from whatever the input is.
   await fs.promises.mkdir(path.dirname(canonicalAbs), { recursive: true });
   await sharp(inputAbs)
-    .rotate() // respect EXIF orientation
-    .webp({ quality: 82, effort: 5 })
+    .rotate()
+    .webp({ quality: 82, effort: 4 })
     .toFile(canonicalAbs);
 
   return canonicalAbs;
 }
 
-async function writeVariant(
-  canonicalWebpAbs: string,
-  outAbs: string,
-  width: number,
-  format: "webp" | "avif",
-) {
-  await fs.promises.mkdir(path.dirname(outAbs), { recursive: true });
+// ── Variant types ────────────────────────────────────────────────────
 
-  const pipeline = sharp(canonicalWebpAbs).rotate().resize({ width });
+type VariantTask = {
+  outAbs: string;
+  width: number;
+  format: "webp" | "avif";
+};
 
-  if (format === "webp") {
-    await pipeline.webp({ quality: 80, effort: 5 }).toFile(outAbs);
-  } else {
-    await pipeline.avif({ quality: 60, effort: 5 }).toFile(outAbs);
-  }
+/**
+ * Check if a variant is already up-to-date (exists and newer than source).
+ */
+function isUpToDate(srcAbs: string, outAbs: string): boolean {
+  if (!exists(outAbs)) return false;
+  const srcStat = fs.statSync(srcAbs);
+  const outStat = fs.statSync(outAbs);
+  return outStat.mtimeMs >= srcStat.mtimeMs && outStat.size > 0;
 }
 
-async function runJob(job: ManifestJob) {
-  const canonicalFromPublic = job.inputFromPublic; // e.g. hero/home-hero.webp
+/**
+ * Process a single job: decode source ONCE, clone for each variant.
+ * Returns arrays of WebP and AVIF tasks that were NOT skipped (i.e. actually encoded).
+ */
+async function runJob(job: ManifestJob): Promise<{ webpCount: number; avifCount: number }> {
+  const canonicalFromPublic = job.inputFromPublic;
   const inputAbs = resolveInputAbs(canonicalFromPublic);
 
   if (!inputAbs) {
-    // STRICT FAIL: missing asset in any supported format
     const base = withoutExt(canonicalFromPublic);
     throw new Error(
       `[optimize-images] Missing required input: ${canonicalFromPublic}\n` +
@@ -96,36 +140,116 @@ async function runJob(job: ManifestJob) {
   }
 
   // Generate canonical .webp if needed (from jpg/png/etc)
-  const canonicalWebpAbs = await ensureCanonicalWebp(
-    inputAbs,
-    canonicalFromPublic,
-  );
+  const canonicalWebpAbs = await ensureCanonicalWebp(inputAbs, canonicalFromPublic);
 
-  const meta = await sharp(canonicalWebpAbs).metadata();
+  // Decode source image ONCE — reuse via clone() for every variant
+  const sourceSharp = sharp(canonicalWebpAbs).rotate();
+  const meta = await sourceSharp.metadata();
+
   if (!meta.width || meta.width < 50) {
     throw new Error(
       `[optimize-images] Invalid canonical image: ${canonicalFromPublic}`,
     );
   }
 
-  const widths = job.widths?.length ? job.widths : DEFAULT_WIDTHS;
-  const baseNoExt = withoutExt(canonicalFromPublic); // hero/home-hero
+  const sourceWidth = meta.width;
+  const requestedWidths = job.widths?.length ? job.widths : DEFAULT_WIDTHS;
+  const baseNoExt = withoutExt(canonicalFromPublic);
 
-  for (const w of widths) {
-    const outWebp = path.join(PUBLIC_DIR, `${baseNoExt}-w${w}.webp`);
-    const outAvif = path.join(PUBLIC_DIR, `${baseNoExt}-w${w}.avif`);
+  // ── Smart width selection ──────────────────────────────────────
+  // 1. Filter out widths larger than source (no upscaling).
+  // 2. Deduplicate: if source is 600px, both 640 and 960 would produce
+  //    600px — keep only the first occurrence of each effective width.
+  const effectiveWidths: number[] = [];
+  const seenEffective = new Set<number>();
 
-    await writeVariant(canonicalWebpAbs, outWebp, w, "webp");
-    await writeVariant(canonicalWebpAbs, outAvif, w, "avif");
+  for (const w of requestedWidths) {
+    const effective = Math.min(w, sourceWidth);
+    if (seenEffective.has(effective)) continue;
+    seenEffective.add(effective);
+    // Use the *requested* width in the filename for consistency, but
+    // resize to the *effective* width.
+    effectiveWidths.push(w);
   }
 
-  console.log(
-    `[optimize-images] OK ${canonicalFromPublic} (input=${path.relative(PUBLIC_DIR, inputAbs)})`,
+  // Build variant task list
+  const webpTasks: (VariantTask & { effectiveWidth: number })[] = [];
+  const avifTasks: (VariantTask & { effectiveWidth: number })[] = [];
+
+  for (const w of effectiveWidths) {
+    const ew = Math.min(w, sourceWidth);
+
+    webpTasks.push({
+      outAbs: path.join(PUBLIC_DIR, `${baseNoExt}-w${w}.webp`),
+      width: w,
+      effectiveWidth: ew,
+      format: "webp",
+    });
+
+    if (!SKIP_AVIF) {
+      avifTasks.push({
+        outAbs: path.join(PUBLIC_DIR, `${baseNoExt}-w${w}.avif`),
+        width: w,
+        effectiveWidth: ew,
+        format: "avif",
+      });
+    }
+  }
+
+  let webpEncoded = 0;
+  let avifEncoded = 0;
+
+  // ── WebP variants (fast) ───────────────────────────────────────
+  await Promise.all(
+    webpTasks.map(async (t) => {
+      if (isUpToDate(canonicalWebpAbs, t.outAbs)) return;
+      await fs.promises.mkdir(path.dirname(t.outAbs), { recursive: true });
+      await sourceSharp
+        .clone()
+        .resize({ width: t.effectiveWidth })
+        .webp({ quality: 80, effort: 4 })
+        .toFile(t.outAbs);
+      webpEncoded++;
+    }),
   );
+
+  // ── AVIF variants (slow) ──────────────────────────────────────
+  await Promise.all(
+    avifTasks.map(async (t) => {
+      if (isUpToDate(canonicalWebpAbs, t.outAbs)) return;
+      await fs.promises.mkdir(path.dirname(t.outAbs), { recursive: true });
+      // Use lower effort for small images (thumbnails / product cards)
+      const effort = t.effectiveWidth <= AVIF_LARGE_THRESHOLD ? 2 : 3;
+      await sourceSharp
+        .clone()
+        .resize({ width: t.effectiveWidth })
+        .avif({ quality: 60, effort })
+        .toFile(t.outAbs);
+      avifEncoded++;
+    }),
+  );
+
+  const skipNote =
+    webpEncoded === 0 && avifEncoded === 0
+      ? " (all cached)"
+      : ` (encoded: ${webpEncoded} webp, ${avifEncoded} avif)`;
+
+  console.log(
+    `  OK ${canonicalFromPublic}${skipNote}`,
+  );
+
+  return { webpCount: webpEncoded, avifCount: avifEncoded };
 }
 
+// ── Main ─────────────────────────────────────────────────────────────
+
 async function main() {
+  const t0 = Date.now();
   console.log(`[optimize-images] public dir: ${PUBLIC_DIR}`);
+  console.log(`[optimize-images] concurrency: ${MAX_CONCURRENCY} workers (UV_THREADPOOL_SIZE=${process.env.UV_THREADPOOL_SIZE})`);
+  if (SKIP_AVIF) {
+    console.log("[optimize-images] --skip-avif: skipping AVIF generation (dev mode)");
+  }
 
   const manifestAbs = path.join(PUBLIC_DIR, "image-manifest.json");
   if (!exists(manifestAbs)) {
@@ -138,11 +262,40 @@ async function main() {
     await fs.promises.readFile(manifestAbs, "utf8"),
   );
 
-  for (const job of jobs) {
-    await runJob(job);
+  // Accumulate per-format stats
+  let totalWebp = 0;
+  let totalAvif = 0;
+
+  // Wrap runJob to collect stats
+  const jobResults: { webpCount: number; avifCount: number }[] = [];
+
+  // We split into two phases for clearer timing, but still use bounded
+  // concurrency within each phase. Jobs are independent so order doesn't
+  // matter for correctness.
+
+  console.log(`\n[optimize-images] processing ${jobs.length} jobs...`);
+
+  await runParallel(
+    jobs,
+    async (job) => {
+      const result = await runJob(job);
+      jobResults.push(result);
+    },
+    MAX_CONCURRENCY,
+  );
+
+  for (const r of jobResults) {
+    totalWebp += r.webpCount;
+    totalAvif += r.avifCount;
   }
 
-  console.log("[optimize-images] done");
+  const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+  console.log(
+    `\n[optimize-images] done in ${elapsed}s` +
+      ` | ${jobs.length} jobs` +
+      ` | encoded: ${totalWebp} webp, ${totalAvif} avif` +
+      (SKIP_AVIF ? " (avif skipped)" : ""),
+  );
 }
 
 main().catch((err) => {

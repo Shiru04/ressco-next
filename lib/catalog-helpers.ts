@@ -37,3 +37,11 @@ export function getSkusForProductSafeSlug(productSlugSafe: string) {
   const s = productSlugSafe.trim().toLowerCase();
   return SKUS.filter((k) => k.productSlugSafes.some((x) => x === s));
 }
+
+/** Public-safe SKU type without internal cost data */
+export type PublicSku = Omit<(typeof SKUS)[number], "cost">;
+
+/** SKUs with cost stripped — safe for client-side bundles */
+export const PUBLIC_SKUS: PublicSku[] = SKUS.map(
+  ({ cost: _cost, ...rest }) => rest,
+);

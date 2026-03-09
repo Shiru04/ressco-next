@@ -32,11 +32,13 @@ export function Button(props: {
   target?: "_blank";
   rel?: string;
   ariaLabel?: string;
+  disabled?: boolean;
 }) {
   const className = cn(
     base,
     variants[props.variant ?? "primary"],
     sizes[props.size ?? "md"],
+    props.disabled && "opacity-50 pointer-events-none",
     props.className,
   );
 
@@ -64,6 +66,7 @@ export function Button(props: {
       onClick={props.onClick}
       className={className}
       aria-label={props.ariaLabel}
+      disabled={props.disabled}
     >
       {props.children}
     </button>
