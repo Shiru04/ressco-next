@@ -205,7 +205,7 @@ export default function FabricationPage() {
       setLoading(false);
       return;
     }
-    fetch(`${url}/api/takeoff/catalog`)
+    fetch(`${url}/api/weborders/catalog`)
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
