@@ -11,7 +11,7 @@ import {
 } from "@/lib/catalog-helpers";
 
 export function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ slug: p.slugRaw }));
+  return PRODUCTS.map((p) => ({ slug: p.slugSafe }));
 }
 
 export async function generateMetadata({

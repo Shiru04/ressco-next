@@ -20,8 +20,8 @@ export function getCategoryByRouteSlug(routeSlug: string) {
 export function getProductByRouteSlug(routeSlug: string) {
   const r = normalizeSlug(routeSlug);
   return (
+    PRODUCTS.find((p) => p.slugSafe === r) ??
     PRODUCTS.find((p) => normalizeSlug(p.slugRaw) === r) ??
-    PRODUCTS.find((p) => normalizeSlug(safeDecode(p.slugRaw)) === r) ??
     null
   );
 }

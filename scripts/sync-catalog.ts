@@ -166,7 +166,7 @@ async function main() {
       return {
         id: r["ID"] || "",
         title: (r["Title"] || "").replace(/\s+/g, " ").trim(),
-        path: productPath,
+        path: `/product-list/${slugSafe}`,
         slugRaw,
         slugSafe,
         categoryIds: catIds,
