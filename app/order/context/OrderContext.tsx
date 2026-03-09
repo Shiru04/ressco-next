@@ -102,16 +102,32 @@ function loadSavedOrder(): OrderState {
 /* ── Provider ───────────────────────────────────────────── */
 
 export function OrderProvider({ children }: { children: ReactNode }) {
-  const [order, setOrder] = useState<OrderState>(loadSavedOrder);
+  // Always start with empty state for SSR/hydration consistency,
+  // then load from sessionStorage on mount
+  const [order, setOrder] = useState<OrderState>(() => ({
+    ...EMPTY_ORDER,
+    contact: { ...EMPTY_CONTACT },
+  }));
+  const [hydrated, setHydrated] = useState(false);
 
-  // Persist cart to sessionStorage on every state change
+  // Load saved order on mount (client only)
   useEffect(() => {
+    const saved = loadSavedOrder();
+    if (saved.items.length > 0 || saved.contact.name) {
+      setOrder(saved);
+    }
+    setHydrated(true);
+  }, []);
+
+  // Persist cart to sessionStorage on every state change (after hydration)
+  useEffect(() => {
+    if (!hydrated) return;
     try {
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(order));
     } catch {
       // Storage full or unavailable, ignore
     }
-  }, [order]);
+  }, [order, hydrated]);
 
   const addItem = useCallback((item: OrderItem) => {
     setOrder((prev) => ({ ...prev, items: [...prev.items, item] }));

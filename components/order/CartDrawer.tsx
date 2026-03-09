@@ -106,6 +106,10 @@ function FabricationRow({ item, onRemove }: { item: FabricationItem; onRemove: (
 export default function CartDrawer() {
   const { order, removeItem, itemCount } = useOrder();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  /* Wait for client mount to avoid SSR hydration mismatch */
+  useEffect(() => setMounted(true), []);
 
   /* Close on Escape */
   useEffect(() => {
@@ -119,11 +123,11 @@ export default function CartDrawer() {
 
   return (
     <>
-      {/* Trigger button */}
-      <CartButton onClick={() => setOpen(true)} itemCount={itemCount} />
+      {/* Trigger button — only show badge after mount to avoid hydration mismatch */}
+      <CartButton onClick={() => setOpen(true)} itemCount={mounted ? itemCount : 0} />
 
       {/* Drawer overlay + panel — portaled to body to escape header stacking context */}
-      {open && createPortal(
+      {mounted && open && createPortal(
         <div className="fixed inset-0 z-[60]">
           {/* Backdrop */}
           <button
