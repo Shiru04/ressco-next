@@ -139,7 +139,10 @@
       960
     ],
     "variants": [
-      "products/categories/sealants-and-tapes-w320.webp"
+      "products/categories/sealants-and-tapes-w320.webp",
+      "products/categories/sealants-and-tapes-w480.webp",
+      "products/categories/sealants-and-tapes-w640.webp",
+      "products/categories/sealants-and-tapes-w960.webp"
     ]
   },
   {
@@ -152,7 +155,9 @@
     ],
     "variants": [
       "products/categories/equipment-and-accessories-w320.webp",
-      "products/categories/equipment-and-accessories-w480.webp"
+      "products/categories/equipment-and-accessories-w480.webp",
+      "products/categories/equipment-and-accessories-w640.webp",
+      "products/categories/equipment-and-accessories-w960.webp"
     ]
   },
   {
@@ -164,7 +169,10 @@
       960
     ],
     "variants": [
-      "products/categories/elbows-and-fittings-w320.webp"
+      "products/categories/elbows-and-fittings-w320.webp",
+      "products/categories/elbows-and-fittings-w480.webp",
+      "products/categories/elbows-and-fittings-w640.webp",
+      "products/categories/elbows-and-fittings-w960.webp"
     ]
   },
   {
@@ -176,7 +184,10 @@
       960
     ],
     "variants": [
-      "products/categories/reducers-and-collars-w320.webp"
+      "products/categories/reducers-and-collars-w320.webp",
+      "products/categories/reducers-and-collars-w480.webp",
+      "products/categories/reducers-and-collars-w640.webp",
+      "products/categories/reducers-and-collars-w960.webp"
     ]
   },
   {
@@ -189,7 +200,9 @@
     ],
     "variants": [
       "products/categories/round-duct-w320.webp",
-      "products/categories/round-duct-w480.webp"
+      "products/categories/round-duct-w480.webp",
+      "products/categories/round-duct-w640.webp",
+      "products/categories/round-duct-w960.webp"
     ]
   },
   {
@@ -203,7 +216,8 @@
     "variants": [
       "products/categories/boot-boxes-and-transitions-w320.webp",
       "products/categories/boot-boxes-and-transitions-w480.webp",
-      "products/categories/boot-boxes-and-transitions-w640.webp"
+      "products/categories/boot-boxes-and-transitions-w640.webp",
+      "products/categories/boot-boxes-and-transitions-w960.webp"
     ]
   },
   {
@@ -231,7 +245,9 @@
     ],
     "variants": [
       "products/categories/duct-components-w320.webp",
-      "products/categories/duct-components-w480.webp"
+      "products/categories/duct-components-w480.webp",
+      "products/categories/duct-components-w640.webp",
+      "products/categories/duct-components-w960.webp"
     ]
   },
   {
@@ -245,7 +261,8 @@
     "variants": [
       "products/categories/flex-duct-w320.webp",
       "products/categories/flex-duct-w480.webp",
-      "products/categories/flex-duct-w640.webp"
+      "products/categories/flex-duct-w640.webp",
+      "products/categories/flex-duct-w960.webp"
     ]
   },
   {
@@ -259,7 +276,8 @@
     "variants": [
       "products/categories/connectors-and-hardware-w320.webp",
       "products/categories/connectors-and-hardware-w480.webp",
-      "products/categories/connectors-and-hardware-w640.webp"
+      "products/categories/connectors-and-hardware-w640.webp",
+      "products/categories/connectors-and-hardware-w960.webp"
     ]
   },
   {
@@ -273,7 +291,8 @@
     "variants": [
       "products/categories/airflow-control-and-dampers-w320.webp",
       "products/categories/airflow-control-and-dampers-w480.webp",
-      "products/categories/airflow-control-and-dampers-w640.webp"
+      "products/categories/airflow-control-and-dampers-w640.webp",
+      "products/categories/airflow-control-and-dampers-w960.webp"
     ]
   },
   {
@@ -286,7 +305,9 @@
     ],
     "variants": [
       "products/categories/mez-flange-system-w320.webp",
-      "products/categories/mez-flange-system-w480.webp"
+      "products/categories/mez-flange-system-w480.webp",
+      "products/categories/mez-flange-system-w640.webp",
+      "products/categories/mez-flange-system-w960.webp"
     ]
   },
   {
@@ -299,7 +320,9 @@
     ],
     "variants": [
       "products/categories/pipe-and-riser-components-w320.webp",
-      "products/categories/pipe-and-riser-components-w480.webp"
+      "products/categories/pipe-and-riser-components-w480.webp",
+      "products/categories/pipe-and-riser-components-w640.webp",
+      "products/categories/pipe-and-riser-components-w960.webp"
     ]
   },
   {
@@ -312,7 +335,9 @@
     ],
     "variants": [
       "products/items/riser-elbow-90-flat-w320.webp",
-      "products/items/riser-elbow-90-flat-w480.webp"
+      "products/items/riser-elbow-90-flat-w480.webp",
+      "products/items/riser-elbow-90-flat-w640.webp",
+      "products/items/riser-elbow-90-flat-w960.webp"
     ]
   },
   {
@@ -340,7 +365,9 @@
     ],
     "variants": [
       "products/items/straight-boot-box-w320.webp",
-      "products/items/straight-boot-box-w480.webp"
+      "products/items/straight-boot-box-w480.webp",
+      "products/items/straight-boot-box-w640.webp",
+      "products/items/straight-boot-box-w960.webp"
     ]
   },
   {
@@ -353,7 +380,9 @@
     ],
     "variants": [
       "products/items/boot-box-w320.webp",
-      "products/items/boot-box-w480.webp"
+      "products/items/boot-box-w480.webp",
+      "products/items/boot-box-w640.webp",
+      "products/items/boot-box-w960.webp"
     ]
   },
   {
@@ -367,7 +396,8 @@
     "variants": [
       "products/items/flashing-w320.webp",
       "products/items/flashing-w480.webp",
-      "products/items/flashing-w640.webp"
+      "products/items/flashing-w640.webp",
+      "products/items/flashing-w960.webp"
     ]
   },
   {
@@ -381,7 +411,8 @@
     "variants": [
       "products/items/china-cap-w320.webp",
       "products/items/china-cap-w480.webp",
-      "products/items/china-cap-w640.webp"
+      "products/items/china-cap-w640.webp",
+      "products/items/china-cap-w960.webp"
     ]
   },
   {
@@ -395,7 +426,8 @@
     "variants": [
       "products/items/elbow-90-w320.webp",
       "products/items/elbow-90-w480.webp",
-      "products/items/elbow-90-w640.webp"
+      "products/items/elbow-90-w640.webp",
+      "products/items/elbow-90-w960.webp"
     ]
   },
   {
@@ -408,7 +440,9 @@
     ],
     "variants": [
       "products/items/plenum-w320.webp",
-      "products/items/plenum-w480.webp"
+      "products/items/plenum-w480.webp",
+      "products/items/plenum-w640.webp",
+      "products/items/plenum-w960.webp"
     ]
   },
   {
@@ -422,7 +456,8 @@
     "variants": [
       "products/items/twist-collar-w-damper-and-scoop-w320.webp",
       "products/items/twist-collar-w-damper-and-scoop-w480.webp",
-      "products/items/twist-collar-w-damper-and-scoop-w640.webp"
+      "products/items/twist-collar-w-damper-and-scoop-w640.webp",
+      "products/items/twist-collar-w-damper-and-scoop-w960.webp"
     ]
   },
   {
@@ -435,7 +470,9 @@
     ],
     "variants": [
       "products/items/register-box-w320.webp",
-      "products/items/register-box-w480.webp"
+      "products/items/register-box-w480.webp",
+      "products/items/register-box-w640.webp",
+      "products/items/register-box-w960.webp"
     ]
   },
   {
@@ -447,7 +484,10 @@
       960
     ],
     "variants": [
-      "products/items/angle-iron-w320.webp"
+      "products/items/angle-iron-w320.webp",
+      "products/items/angle-iron-w480.webp",
+      "products/items/angle-iron-w640.webp",
+      "products/items/angle-iron-w960.webp"
     ]
   },
   {
@@ -461,7 +501,8 @@
     "variants": [
       "products/items/flat-stock-w320.webp",
       "products/items/flat-stock-w480.webp",
-      "products/items/flat-stock-w640.webp"
+      "products/items/flat-stock-w640.webp",
+      "products/items/flat-stock-w960.webp"
     ]
   },
   {
@@ -474,7 +515,9 @@
     ],
     "variants": [
       "products/items/mez-flange-and-accesories-w320.webp",
-      "products/items/mez-flange-and-accesories-w480.webp"
+      "products/items/mez-flange-and-accesories-w480.webp",
+      "products/items/mez-flange-and-accesories-w640.webp",
+      "products/items/mez-flange-and-accesories-w960.webp"
     ]
   },
   {
@@ -487,7 +530,9 @@
     ],
     "variants": [
       "products/items/dove-tail-collar-w320.webp",
-      "products/items/dove-tail-collar-w480.webp"
+      "products/items/dove-tail-collar-w480.webp",
+      "products/items/dove-tail-collar-w640.webp",
+      "products/items/dove-tail-collar-w960.webp"
     ]
   },
   {
@@ -500,7 +545,9 @@
     ],
     "variants": [
       "products/items/s-cleat-flat-s-w320.webp",
-      "products/items/s-cleat-flat-s-w480.webp"
+      "products/items/s-cleat-flat-s-w480.webp",
+      "products/items/s-cleat-flat-s-w640.webp",
+      "products/items/s-cleat-flat-s-w960.webp"
     ]
   },
   {
@@ -514,7 +561,8 @@
     "variants": [
       "products/items/side-tab-w320.webp",
       "products/items/side-tab-w480.webp",
-      "products/items/side-tab-w640.webp"
+      "products/items/side-tab-w640.webp",
+      "products/items/side-tab-w960.webp"
     ]
   },
   {
@@ -528,7 +576,8 @@
     "variants": [
       "products/items/pg-w320.webp",
       "products/items/pg-w480.webp",
-      "products/items/pg-w640.webp"
+      "products/items/pg-w640.webp",
+      "products/items/pg-w960.webp"
     ]
   },
   {
@@ -542,7 +591,8 @@
     "variants": [
       "products/items/line-set-cover-w320.webp",
       "products/items/line-set-cover-w480.webp",
-      "products/items/line-set-cover-w640.webp"
+      "products/items/line-set-cover-w640.webp",
+      "products/items/line-set-cover-w960.webp"
     ]
   },
   {
@@ -554,7 +604,10 @@
       960
     ],
     "variants": [
-      "products/items/reducer-sure-fit-w320.webp"
+      "products/items/reducer-sure-fit-w320.webp",
+      "products/items/reducer-sure-fit-w480.webp",
+      "products/items/reducer-sure-fit-w640.webp",
+      "products/items/reducer-sure-fit-w960.webp"
     ]
   },
   {
@@ -567,7 +620,9 @@
     ],
     "variants": [
       "products/items/drive-w320.webp",
-      "products/items/drive-w480.webp"
+      "products/items/drive-w480.webp",
+      "products/items/drive-w640.webp",
+      "products/items/drive-w960.webp"
     ]
   },
   {
@@ -580,7 +635,9 @@
     ],
     "variants": [
       "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-6-w320.webp",
-      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-6-w480.webp"
+      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-6-w480.webp",
+      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-6-w640.webp",
+      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-6-w960.webp"
     ]
   },
   {
@@ -592,7 +649,10 @@
       960
     ],
     "variants": [
-      "products/items/duct-ties-w320.webp"
+      "products/items/duct-ties-w320.webp",
+      "products/items/duct-ties-w480.webp",
+      "products/items/duct-ties-w640.webp",
+      "products/items/duct-ties-w960.webp"
     ]
   },
   {
@@ -606,7 +666,8 @@
     "variants": [
       "products/items/turning-vanes-w320.webp",
       "products/items/turning-vanes-w480.webp",
-      "products/items/turning-vanes-w640.webp"
+      "products/items/turning-vanes-w640.webp",
+      "products/items/turning-vanes-w960.webp"
     ]
   },
   {
@@ -619,7 +680,9 @@
     ],
     "variants": [
       "products/items/wall-cap-w320.webp",
-      "products/items/wall-cap-w480.webp"
+      "products/items/wall-cap-w480.webp",
+      "products/items/wall-cap-w640.webp",
+      "products/items/wall-cap-w960.webp"
     ]
   },
   {
@@ -632,7 +695,9 @@
     ],
     "variants": [
       "products/items/stack-head-boot-box-w320.webp",
-      "products/items/stack-head-boot-box-w480.webp"
+      "products/items/stack-head-boot-box-w480.webp",
+      "products/items/stack-head-boot-box-w640.webp",
+      "products/items/stack-head-boot-box-w960.webp"
     ]
   },
   {
@@ -645,7 +710,9 @@
     ],
     "variants": [
       "products/items/riser-elbow-45-standard-w320.webp",
-      "products/items/riser-elbow-45-standard-w480.webp"
+      "products/items/riser-elbow-45-standard-w480.webp",
+      "products/items/riser-elbow-45-standard-w640.webp",
+      "products/items/riser-elbow-45-standard-w960.webp"
     ]
   },
   {
@@ -658,7 +725,9 @@
     ],
     "variants": [
       "products/items/spiral-pipe-7-5-w320.webp",
-      "products/items/spiral-pipe-7-5-w480.webp"
+      "products/items/spiral-pipe-7-5-w480.webp",
+      "products/items/spiral-pipe-7-5-w640.webp",
+      "products/items/spiral-pipe-7-5-w960.webp"
     ]
   },
   {
@@ -671,7 +740,9 @@
     ],
     "variants": [
       "products/items/elbow-45-w320.webp",
-      "products/items/elbow-45-w480.webp"
+      "products/items/elbow-45-w480.webp",
+      "products/items/elbow-45-w640.webp",
+      "products/items/elbow-45-w960.webp"
     ]
   },
   {
@@ -684,7 +755,9 @@
     ],
     "variants": [
       "products/items/kd-pipe-w320.webp",
-      "products/items/kd-pipe-w480.webp"
+      "products/items/kd-pipe-w480.webp",
+      "products/items/kd-pipe-w640.webp",
+      "products/items/kd-pipe-w960.webp"
     ]
   },
   {
@@ -697,7 +770,9 @@
     ],
     "variants": [
       "products/items/spiral-pipe-10-w320.webp",
-      "products/items/spiral-pipe-10-w480.webp"
+      "products/items/spiral-pipe-10-w480.webp",
+      "products/items/spiral-pipe-10-w640.webp",
+      "products/items/spiral-pipe-10-w960.webp"
     ]
   },
   {
@@ -711,7 +786,8 @@
     "variants": [
       "products/items/volume-damper-w-3-8-rod-and-1-stand-off-w320.webp",
       "products/items/volume-damper-w-3-8-rod-and-1-stand-off-w480.webp",
-      "products/items/volume-damper-w-3-8-rod-and-1-stand-off-w640.webp"
+      "products/items/volume-damper-w-3-8-rod-and-1-stand-off-w640.webp",
+      "products/items/volume-damper-w-3-8-rod-and-1-stand-off-w960.webp"
     ]
   },
   {
@@ -725,7 +801,8 @@
     "variants": [
       "products/items/t-top-w320.webp",
       "products/items/t-top-w480.webp",
-      "products/items/t-top-w640.webp"
+      "products/items/t-top-w640.webp",
+      "products/items/t-top-w960.webp"
     ]
   },
   {
@@ -739,7 +816,8 @@
     "variants": [
       "products/items/twist-collar-w-damper-w320.webp",
       "products/items/twist-collar-w-damper-w480.webp",
-      "products/items/twist-collar-w-damper-w640.webp"
+      "products/items/twist-collar-w-damper-w640.webp",
+      "products/items/twist-collar-w-damper-w960.webp"
     ]
   },
   {
@@ -753,7 +831,8 @@
     "variants": [
       "products/items/tee-wye-w320.webp",
       "products/items/tee-wye-w480.webp",
-      "products/items/tee-wye-w640.webp"
+      "products/items/tee-wye-w640.webp",
+      "products/items/tee-wye-w960.webp"
     ]
   },
   {
@@ -766,7 +845,9 @@
     ],
     "variants": [
       "products/items/bare-aluminum-flex-w320.webp",
-      "products/items/bare-aluminum-flex-w480.webp"
+      "products/items/bare-aluminum-flex-w480.webp",
+      "products/items/bare-aluminum-flex-w640.webp",
+      "products/items/bare-aluminum-flex-w960.webp"
     ]
   },
   {
@@ -778,7 +859,10 @@
       960
     ],
     "variants": [
-      "products/items/duct-liner-wrap-w320.webp"
+      "products/items/duct-liner-wrap-w320.webp",
+      "products/items/duct-liner-wrap-w480.webp",
+      "products/items/duct-liner-wrap-w640.webp",
+      "products/items/duct-liner-wrap-w960.webp"
     ]
   },
   {
@@ -791,7 +875,9 @@
     ],
     "variants": [
       "products/items/1-circle-liner-spiral-pipe-10-w320.webp",
-      "products/items/1-circle-liner-spiral-pipe-10-w480.webp"
+      "products/items/1-circle-liner-spiral-pipe-10-w480.webp",
+      "products/items/1-circle-liner-spiral-pipe-10-w640.webp",
+      "products/items/1-circle-liner-spiral-pipe-10-w960.webp"
     ]
   },
   {
@@ -804,7 +890,9 @@
     ],
     "variants": [
       "products/items/riser-pipe-w320.webp",
-      "products/items/riser-pipe-w480.webp"
+      "products/items/riser-pipe-w480.webp",
+      "products/items/riser-pipe-w640.webp",
+      "products/items/riser-pipe-w960.webp"
     ]
   },
   {
@@ -817,7 +905,9 @@
     ],
     "variants": [
       "products/items/furnace-stand-w320.webp",
-      "products/items/furnace-stand-w480.webp"
+      "products/items/furnace-stand-w480.webp",
+      "products/items/furnace-stand-w640.webp",
+      "products/items/furnace-stand-w960.webp"
     ]
   },
   {
@@ -830,7 +920,9 @@
     ],
     "variants": [
       "products/items/riser-end-cap-w320.webp",
-      "products/items/riser-end-cap-w480.webp"
+      "products/items/riser-end-cap-w480.webp",
+      "products/items/riser-end-cap-w640.webp",
+      "products/items/riser-end-cap-w960.webp"
     ]
   },
   {
@@ -843,7 +935,9 @@
     ],
     "variants": [
       "products/items/ceiling-box-w320.webp",
-      "products/items/ceiling-box-w480.webp"
+      "products/items/ceiling-box-w480.webp",
+      "products/items/ceiling-box-w640.webp",
+      "products/items/ceiling-box-w960.webp"
     ]
   },
   {
@@ -857,7 +951,8 @@
     "variants": [
       "products/items/duct-board-collar-w320.webp",
       "products/items/duct-board-collar-w480.webp",
-      "products/items/duct-board-collar-w640.webp"
+      "products/items/duct-board-collar-w640.webp",
+      "products/items/duct-board-collar-w960.webp"
     ]
   },
   {
@@ -871,7 +966,8 @@
     "variants": [
       "products/items/twist-collar-spin-in-collar-w320.webp",
       "products/items/twist-collar-spin-in-collar-w480.webp",
-      "products/items/twist-collar-spin-in-collar-w640.webp"
+      "products/items/twist-collar-spin-in-collar-w640.webp",
+      "products/items/twist-collar-spin-in-collar-w960.webp"
     ]
   },
   {
@@ -883,7 +979,10 @@
       960
     ],
     "variants": [
-      "products/items/flex-connector-w320.webp"
+      "products/items/flex-connector-w320.webp",
+      "products/items/flex-connector-w480.webp",
+      "products/items/flex-connector-w640.webp",
+      "products/items/flex-connector-w960.webp"
     ]
   },
   {
@@ -896,7 +995,9 @@
     ],
     "variants": [
       "products/items/1-circle-lined-wye-w320.webp",
-      "products/items/1-circle-lined-wye-w480.webp"
+      "products/items/1-circle-lined-wye-w480.webp",
+      "products/items/1-circle-lined-wye-w640.webp",
+      "products/items/1-circle-lined-wye-w960.webp"
     ]
   },
   {
@@ -909,7 +1010,9 @@
     ],
     "variants": [
       "products/items/1-circle-lined-kd-pipe-w320.webp",
-      "products/items/1-circle-lined-kd-pipe-w480.webp"
+      "products/items/1-circle-lined-kd-pipe-w480.webp",
+      "products/items/1-circle-lined-kd-pipe-w640.webp",
+      "products/items/1-circle-lined-kd-pipe-w960.webp"
     ]
   },
   {
@@ -922,7 +1025,9 @@
     ],
     "variants": [
       "products/items/pancake-taper-cookie-cutter-w320.webp",
-      "products/items/pancake-taper-cookie-cutter-w480.webp"
+      "products/items/pancake-taper-cookie-cutter-w480.webp",
+      "products/items/pancake-taper-cookie-cutter-w640.webp",
+      "products/items/pancake-taper-cookie-cutter-w960.webp"
     ]
   },
   {
@@ -936,7 +1041,8 @@
     "variants": [
       "products/items/conductor-pipe-w320.webp",
       "products/items/conductor-pipe-w480.webp",
-      "products/items/conductor-pipe-w640.webp"
+      "products/items/conductor-pipe-w640.webp",
+      "products/items/conductor-pipe-w960.webp"
     ]
   },
   {
@@ -949,7 +1055,9 @@
     ],
     "variants": [
       "products/items/riser-elbow-45-standard-w320.webp",
-      "products/items/riser-elbow-45-standard-w480.webp"
+      "products/items/riser-elbow-45-standard-w480.webp",
+      "products/items/riser-elbow-45-standard-w640.webp",
+      "products/items/riser-elbow-45-standard-w960.webp"
     ]
   },
   {
@@ -961,7 +1069,10 @@
       960
     ],
     "variants": [
-      "products/items/sealers-and-adhesives-w320.webp"
+      "products/items/sealers-and-adhesives-w320.webp",
+      "products/items/sealers-and-adhesives-w480.webp",
+      "products/items/sealers-and-adhesives-w640.webp",
+      "products/items/sealers-and-adhesives-w960.webp"
     ]
   },
   {
@@ -974,7 +1085,9 @@
     ],
     "variants": [
       "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-8-w320.webp",
-      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-8-w480.webp"
+      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-8-w480.webp",
+      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-8-w640.webp",
+      "products/items/wrapped-aluminum-flex-w-metalized-jacket-r-8-w960.webp"
     ]
   },
   {
@@ -988,7 +1101,8 @@
     "variants": [
       "products/items/saddle-wye-w320.webp",
       "products/items/saddle-wye-w480.webp",
-      "products/items/saddle-wye-w640.webp"
+      "products/items/saddle-wye-w640.webp",
+      "products/items/saddle-wye-w960.webp"
     ]
   },
   {
@@ -1001,7 +1115,9 @@
     ],
     "variants": [
       "products/items/drain-pan-w320.webp",
-      "products/items/drain-pan-w480.webp"
+      "products/items/drain-pan-w480.webp",
+      "products/items/drain-pan-w640.webp",
+      "products/items/drain-pan-w960.webp"
     ]
   },
   {
@@ -1013,7 +1129,10 @@
       960
     ],
     "variants": [
-      "products/items/standing-s-w320.webp"
+      "products/items/standing-s-w320.webp",
+      "products/items/standing-s-w480.webp",
+      "products/items/standing-s-w640.webp",
+      "products/items/standing-s-w960.webp"
     ]
   },
   {
@@ -1025,7 +1144,10 @@
       960
     ],
     "variants": [
-      "products/items/hanger-strap-w320.webp"
+      "products/items/hanger-strap-w320.webp",
+      "products/items/hanger-strap-w480.webp",
+      "products/items/hanger-strap-w640.webp",
+      "products/items/hanger-strap-w960.webp"
     ]
   },
   {
@@ -1037,7 +1159,10 @@
       960
     ],
     "variants": [
-      "products/items/duct-foil-tapes-w320.webp"
+      "products/items/duct-foil-tapes-w320.webp",
+      "products/items/duct-foil-tapes-w480.webp",
+      "products/items/duct-foil-tapes-w640.webp",
+      "products/items/duct-foil-tapes-w960.webp"
     ]
   },
   {
@@ -1051,7 +1176,8 @@
     "variants": [
       "products/items/return-air-can-w320.webp",
       "products/items/return-air-can-w480.webp",
-      "products/items/return-air-can-w640.webp"
+      "products/items/return-air-can-w640.webp",
+      "products/items/return-air-can-w960.webp"
     ]
   },
   {
@@ -1064,7 +1190,9 @@
     ],
     "variants": [
       "products/items/end-cap-w320.webp",
-      "products/items/end-cap-w480.webp"
+      "products/items/end-cap-w480.webp",
+      "products/items/end-cap-w640.webp",
+      "products/items/end-cap-w960.webp"
     ]
   },
   {
@@ -1077,7 +1205,9 @@
     ],
     "variants": [
       "products/items/1-circle-lined-elbow-w320.webp",
-      "products/items/1-circle-lined-elbow-w480.webp"
+      "products/items/1-circle-lined-elbow-w480.webp",
+      "products/items/1-circle-lined-elbow-w640.webp",
+      "products/items/1-circle-lined-elbow-w960.webp"
     ]
   },
   {
@@ -1091,7 +1221,8 @@
     "variants": [
       "products/items/swamp-cooler-diffuser-w320.webp",
       "products/items/swamp-cooler-diffuser-w480.webp",
-      "products/items/swamp-cooler-diffuser-w640.webp"
+      "products/items/swamp-cooler-diffuser-w640.webp",
+      "products/items/swamp-cooler-diffuser-w960.webp"
     ]
   },
   {
@@ -1103,7 +1234,10 @@
       960
     ],
     "variants": [
-      "products/items/riser-elbow-45-flat-w320.webp"
+      "products/items/riser-elbow-45-flat-w320.webp",
+      "products/items/riser-elbow-45-flat-w480.webp",
+      "products/items/riser-elbow-45-flat-w640.webp",
+      "products/items/riser-elbow-45-flat-w960.webp"
     ]
   },
   {
@@ -1117,7 +1251,8 @@
     "variants": [
       "products/items/cone-boot-w320.webp",
       "products/items/cone-boot-w480.webp",
-      "products/items/cone-boot-w640.webp"
+      "products/items/cone-boot-w640.webp",
+      "products/items/cone-boot-w960.webp"
     ]
   },
   {
@@ -1130,7 +1265,9 @@
     ],
     "variants": [
       "products/items/1-circle-liner-w320.webp",
-      "products/items/1-circle-liner-w480.webp"
+      "products/items/1-circle-liner-w480.webp",
+      "products/items/1-circle-liner-w640.webp",
+      "products/items/1-circle-liner-w960.webp"
     ]
   },
   {
@@ -1176,7 +1313,9 @@
     ],
     "variants": [
       "products/categories/round-duct-w320.webp",
-      "products/categories/round-duct-w480.webp"
+      "products/categories/round-duct-w480.webp",
+      "products/categories/round-duct-w640.webp",
+      "products/categories/round-duct-w960.webp"
     ]
   },
   {
@@ -1189,7 +1328,9 @@
     ],
     "variants": [
       "products/categories/fittings-w320.webp",
-      "products/categories/fittings-w480.webp"
+      "products/categories/fittings-w480.webp",
+      "products/categories/fittings-w640.webp",
+      "products/categories/fittings-w960.webp"
     ]
   },
   {
@@ -1202,7 +1343,9 @@
     ],
     "variants": [
       "products/categories/residential-fittings-w320.webp",
-      "products/categories/residential-fittings-w480.webp"
+      "products/categories/residential-fittings-w480.webp",
+      "products/categories/residential-fittings-w640.webp",
+      "products/categories/residential-fittings-w960.webp"
     ]
   },
   {
@@ -1214,7 +1357,10 @@
       960
     ],
     "variants": [
-      "products/categories/miscellaneous-w320.webp"
+      "products/categories/miscellaneous-w320.webp",
+      "products/categories/miscellaneous-w480.webp",
+      "products/categories/miscellaneous-w640.webp",
+      "products/categories/miscellaneous-w960.webp"
     ]
   },
   {
@@ -1227,7 +1373,9 @@
     ],
     "variants": [
       "products/categories/circlelined-products-w320.webp",
-      "products/categories/circlelined-products-w480.webp"
+      "products/categories/circlelined-products-w480.webp",
+      "products/categories/circlelined-products-w640.webp",
+      "products/categories/circlelined-products-w960.webp"
     ]
   },
   {

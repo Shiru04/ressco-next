@@ -157,21 +157,11 @@ async function runJob(job: ManifestJob): Promise<{ webpCount: number; avifCount:
   const requestedWidths = job.widths?.length ? job.widths : DEFAULT_WIDTHS;
   const baseNoExt = withoutExt(canonicalFromPublic);
 
-  // ── Smart width selection ──────────────────────────────────────
-  // 1. Filter out widths larger than source (no upscaling).
-  // 2. Deduplicate: if source is 600px, both 640 and 960 would produce
-  //    600px — keep only the first occurrence of each effective width.
-  const effectiveWidths: number[] = [];
-  const seenEffective = new Set<number>();
-
-  for (const w of requestedWidths) {
-    const effective = Math.min(w, sourceWidth);
-    if (seenEffective.has(effective)) continue;
-    seenEffective.add(effective);
-    // Use the *requested* width in the filename for consistency, but
-    // resize to the *effective* width.
-    effectiveWidths.push(w);
-  }
+  // ── Width selection ────────────────────────────────────────────
+  // Generate a file for every requested width (clamped to source width).
+  // Even if two widths produce the same effective size we still emit
+  // both files so that <picture> srcset never 404s.
+  const effectiveWidths = [...requestedWidths];
 
   // Build variant task list
   const webpTasks: (VariantTask & { effectiveWidth: number })[] = [];
