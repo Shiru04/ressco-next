@@ -14,6 +14,7 @@ const SKIP_AVIF = process.argv.includes("--skip-avif");
 type ManifestJob = {
   inputFromPublic: string; // canonical path, usually .webp
   widths?: number[];
+  variants?: string[];
 };
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
@@ -127,7 +128,7 @@ function isUpToDate(srcAbs: string, outAbs: string): boolean {
  * Process a single job: decode source ONCE, clone for each variant.
  * Returns arrays of WebP and AVIF tasks that were NOT skipped (i.e. actually encoded).
  */
-async function runJob(job: ManifestJob): Promise<{ webpCount: number; avifCount: number }> {
+async function runJob(job: ManifestJob): Promise<{ webpCount: number; avifCount: number; variants: string[] }> {
   const canonicalFromPublic = job.inputFromPublic;
   const inputAbs = resolveInputAbs(canonicalFromPublic);
 
@@ -238,7 +239,13 @@ async function runJob(job: ManifestJob): Promise<{ webpCount: number; avifCount:
     `  OK ${canonicalFromPublic}${skipNote}`,
   );
 
-  return { webpCount: webpEncoded, avifCount: avifEncoded };
+  // Collect variant paths (relative to public/) for the manifest
+  const variants = [
+    ...webpTasks.map((t) => path.relative(PUBLIC_DIR, t.outAbs).replace(/\\/g, "/")),
+    ...avifTasks.map((t) => path.relative(PUBLIC_DIR, t.outAbs).replace(/\\/g, "/")),
+  ];
+
+  return { webpCount: webpEncoded, avifCount: avifEncoded, variants };
 }
 
 // ── Main ─────────────────────────────────────────────────────────────
@@ -266,28 +273,33 @@ async function main() {
   let totalWebp = 0;
   let totalAvif = 0;
 
-  // Wrap runJob to collect stats
-  const jobResults: { webpCount: number; avifCount: number }[] = [];
-
-  // We split into two phases for clearer timing, but still use bounded
-  // concurrency within each phase. Jobs are independent so order doesn't
-  // matter for correctness.
+  // Map job index → result so we can write variants back to the manifest
+  const jobResults = new Map<number, { webpCount: number; avifCount: number; variants: string[] }>();
 
   console.log(`\n[optimize-images] processing ${jobs.length} jobs...`);
 
   await runParallel(
     jobs,
     async (job) => {
+      const idx = jobs.indexOf(job);
       const result = await runJob(job);
-      jobResults.push(result);
+      jobResults.set(idx, result);
     },
     MAX_CONCURRENCY,
   );
 
-  for (const r of jobResults) {
+  for (const [idx, r] of jobResults) {
     totalWebp += r.webpCount;
     totalAvif += r.avifCount;
+    // Write variants back into the manifest entry
+    (jobs[idx] as ManifestJob & { variants: string[] }).variants = r.variants;
   }
+
+  // Persist updated manifest with variants
+  await fs.promises.writeFile(
+    manifestAbs,
+    JSON.stringify(jobs, null, 2) + "\n",
+  );
 
   const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
   console.log(

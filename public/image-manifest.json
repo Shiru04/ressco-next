@@ -1613,6 +1613,10 @@
     "widths": [
       320,
       480
+    ],
+    "variants": [
+      "about/staff/edwin-w320.webp",
+      "about/staff/edwin-w480.webp"
     ]
   },
   {
@@ -1620,6 +1624,10 @@
     "widths": [
       320,
       480
+    ],
+    "variants": [
+      "about/staff/alex-w320.webp",
+      "about/staff/alex-w480.webp"
     ]
   },
   {
@@ -1627,6 +1635,10 @@
     "widths": [
       320,
       480
+    ],
+    "variants": [
+      "about/staff/elysia-w320.webp",
+      "about/staff/elysia-w480.webp"
     ]
   }
 ]
