@@ -14,6 +14,8 @@
  */
 
 import { spawn, execSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 function runSync(label: string, cmd: string, args: string[]) {
   const t0 = Date.now();
@@ -54,6 +56,17 @@ async function main() {
 
   // Phase 1: sync catalog (sequential prerequisite)
   runSync("sync-catalog", "tsx", ["scripts/sync-catalog.ts"]);
+
+  // Phase 1.5: purge cached image variants so optimize-images regenerates
+  // from the committed base files (avoids stale variants from build cache)
+  const catDir = path.join(process.cwd(), "public", "products", "categories");
+  if (fs.existsSync(catDir)) {
+    const stale = fs.readdirSync(catDir).filter((f) => /-w\d+\./.test(f));
+    for (const f of stale) fs.unlinkSync(path.join(catDir, f));
+    if (stale.length > 0) {
+      console.log(`[prebuild] purged ${stale.length} cached category variants`);
+    }
+  }
 
   // Phase 2: optimize-images + generate-sitemap in parallel
   const results = await Promise.allSettled([
