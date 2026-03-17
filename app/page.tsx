@@ -54,11 +54,11 @@ const WHY_RESSCO = [
 // Show a curated subset of categories on the home page
 const HOME_CATEGORIES = [
   "Round Duct",
-  "Elbows & Fittings",
-  "Flex Duct",
-  "Boot Boxes & Transitions",
-  "Airflow Control & Dampers",
-  "Reducers & Collars",
+  "Fittings",
+  "Residential Fittings",
+  "Miscellaneous",
+  "Circlelined Products",
+  "Venting",
 ];
 
 const CA_REGIONS = [
