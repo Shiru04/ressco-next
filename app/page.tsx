@@ -9,7 +9,7 @@ import { CATEGORIES } from "@/lib/catalog";
 export const metadata = buildMetadata({
   title: "RESSCO Metals | Sheet Metal Fabrication & HVAC Supply — Anaheim, CA",
   description:
-    "Family-owned sheet metal fabrication and HVAC supply company based in Anaheim, CA. Custom ductwork, galvanized steel, laser cutting, and precision parts for contractors across California. Est. 1996.",
+    "Family-owned sheet metal fabrication & HVAC supply in Anaheim, CA. Custom ductwork, galvanized steel & laser cutting for California contractors since 1996.",
   path: "/",
 });
 
