@@ -1607,5 +1607,26 @@
       "products/items/1-circle-liner-w960.webp",
       "products/items/1-circle-liner-w960.avif"
     ]
+  },
+  {
+    "inputFromPublic": "about/staff/edwin.webp",
+    "widths": [
+      320,
+      480
+    ]
+  },
+  {
+    "inputFromPublic": "about/staff/alex.webp",
+    "widths": [
+      320,
+      480
+    ]
+  },
+  {
+    "inputFromPublic": "about/staff/elysia.webp",
+    "widths": [
+      320,
+      480
+    ]
   }
 ]

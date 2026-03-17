@@ -1,6 +1,7 @@
 import { PageHero } from "@/components/sections/PageHero";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
+import { ResponsiveImage } from "@/components/ui/ResponsiveImage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -269,6 +270,52 @@ export default function AboutPage() {
               </div>
             </div>
           </Card>
+        </div>
+      </Section>
+
+      <Section className="py-12 sm:py-14">
+        <div className="text-center">
+          <div className="text-sm font-extrabold uppercase tracking-wide text-black/60">
+            Leadership
+          </div>
+          <div className="mt-2 text-2xl font-extrabold">Meet Our Team</div>
+        </div>
+
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              name: "Edwin",
+              role: "President",
+              src: "/about/staff/edwin",
+            },
+            {
+              name: "Alex",
+              role: "Sales Manager",
+              src: "/about/staff/alex",
+            },
+            {
+              name: "Elysia",
+              role: "Accounts Manager",
+              src: "/about/staff/elysia",
+            },
+          ].map((member) => (
+            <Card key={member.name} className="overflow-hidden">
+              <div className="relative aspect-[2/3]">
+                <ResponsiveImage
+                  srcBase={member.src}
+                  alt={`${member.name} — ${member.role}`}
+                  widths={[320, 480]}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  fill
+                  className="rounded-t-2xl"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <div className="text-lg font-extrabold">{member.name}</div>
+                <div className="mt-1 text-sm text-black/60">{member.role}</div>
+              </div>
+            </Card>
+          ))}
         </div>
       </Section>
 

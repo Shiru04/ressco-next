@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -21,18 +20,18 @@ type PieceType = {
 /* ── Diagram image helper ───────────────────────────────── */
 
 function DiagramImage({ diagram, name }: { diagram: string; name: string }) {
-  const [error, setError] = useState(false);
-  if (error) return null;
+  const [hidden, setHidden] = useState(false);
+  if (hidden) return null;
 
   return (
-    <div className="relative aspect-square w-full bg-black/[0.02] rounded-xl overflow-hidden">
-      <Image
+    <div className="flex items-center justify-center aspect-square w-full bg-black/[0.02] rounded-xl overflow-hidden">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={`/takeoff-icons/${diagram}.png`}
         alt={`${name} diagram`}
-        fill
-        sizes="(min-width: 1024px) 280px, (min-width: 640px) 240px, 100vw"
-        className="object-contain p-3"
-        onError={() => setError(true)}
+        className="max-w-[90%] max-h-[90%] object-contain"
+        onError={() => setHidden(true)}
+        loading="lazy"
       />
     </div>
   );

@@ -33,124 +33,75 @@ export type CatalogSku = {
 
 export const CATEGORIES: CatalogCategory[] = [
   {
-    "id": "01763a64-ba0c-4a80-ac80-cab6c3d0e426",
-    "title": "Sealants & Tapes",
-    "path": "/product-categories/sealants-and-tapes",
-    "slug": "sealants-and-tapes",
-    "imagePlaceholder": "/products/categories/sealants-and-tapes.webp"
-  },
-  {
-    "id": "0ebcc58d-5925-4824-a8c7-7d0c87abb6da",
-    "title": "Equipment & Accessories",
-    "path": "/product-categories/equipment-and-accessories",
-    "slug": "equipment-and-accessories",
-    "imagePlaceholder": "/products/categories/equipment-and-accessories.webp"
-  },
-  {
-    "id": "3657abb4-bd68-4e1d-8c17-86ad7773ead4",
-    "title": "Elbows & Fittings",
-    "path": "/product-categories/elbows-and-fittings",
-    "slug": "elbows-and-fittings",
-    "imagePlaceholder": "/products/categories/elbows-and-fittings.webp"
-  },
-  {
-    "id": "4a837012-97fb-4d8e-8e32-719924f903a9",
-    "title": "Reducers & Collars",
-    "path": "/product-categories/reducers-and-collars",
-    "slug": "reducers-and-collars",
-    "imagePlaceholder": "/products/categories/reducers-and-collars.webp"
-  },
-  {
-    "id": "5715b66e-0850-4710-8212-116d8b5c05dd",
+    "id": "b882726f-044f-4430-bd68-4726ff1c7805",
     "title": "Round Duct",
     "path": "/product-categories/round-duct",
     "slug": "round-duct",
     "imagePlaceholder": "/products/categories/round-duct.webp"
   },
   {
-    "id": "66bc596e-6594-46ec-873b-fbb6f227aba1",
-    "title": "Boot Boxes & Transitions",
-    "path": "/product-categories/boot-boxes-and-transitions",
-    "slug": "boot-boxes-and-transitions",
-    "imagePlaceholder": "/products/categories/boot-boxes-and-transitions.webp"
+    "id": "5037599b-c279-41f9-be72-ec48ad107397",
+    "title": "Fittings",
+    "path": "/product-categories/fittings",
+    "slug": "fittings",
+    "imagePlaceholder": "/products/categories/fittings.webp"
   },
   {
-    "id": "96b74d10-db4e-4f6a-a090-bc4176dfd450",
-    "title": "Vent Caps & Flashings",
-    "path": "/product-categories/vent-caps-and-flashings",
-    "slug": "vent-caps-and-flashings",
-    "imagePlaceholder": "/products/categories/vent-caps-and-flashings.webp"
+    "id": "03c30a92-062a-4878-b1c3-1376c915392d",
+    "title": "Residential Fittings",
+    "path": "/product-categories/residential-fittings",
+    "slug": "residential-fittings",
+    "imagePlaceholder": "/products/categories/residential-fittings.webp"
   },
   {
-    "id": "9e60a4e8-1fa0-424b-8df1-cc394efa6e3e",
-    "title": "Duct Components",
-    "path": "/product-categories/duct-components",
-    "slug": "duct-components",
-    "imagePlaceholder": "/products/categories/duct-components.webp"
+    "id": "7e1bdba3-a0de-4cba-9ae1-4796645cedc7",
+    "title": "Miscellaneous",
+    "path": "/product-categories/miscellaneous",
+    "slug": "miscellaneous",
+    "imagePlaceholder": "/products/categories/miscellaneous.webp"
   },
   {
-    "id": "9f5b96cb-e3b3-4158-b1e0-c42a25aaf893",
-    "title": "Flex Duct",
-    "path": "/product-categories/flex-duct",
-    "slug": "flex-duct",
-    "imagePlaceholder": "/products/categories/flex-duct.webp"
+    "id": "9e15109f-11eb-428e-a874-a5be3cbc045c",
+    "title": "Circlelined Products",
+    "path": "/product-categories/circlelined-products",
+    "slug": "circlelined-products",
+    "imagePlaceholder": "/products/categories/circlelined-products.webp"
   },
   {
-    "id": "a3a56b0f-8b8b-4576-8628-2ac5e51d8000",
-    "title": "Connectors & Hardware",
-    "path": "/product-categories/connectors-and-hardware",
-    "slug": "connectors-and-hardware",
-    "imagePlaceholder": "/products/categories/connectors-and-hardware.webp"
-  },
-  {
-    "id": "b98eb550-97aa-44d1-b9a7-a55edece17bf",
-    "title": "Airflow Control & Dampers",
-    "path": "/product-categories/airflow-control-and-dampers",
-    "slug": "airflow-control-and-dampers",
-    "imagePlaceholder": "/products/categories/airflow-control-and-dampers.webp"
-  },
-  {
-    "id": "bdbfc4f5-7584-476b-a45b-644131e935d1",
-    "title": "MEZ Flange System",
-    "path": "/product-categories/mez-flange-system",
-    "slug": "mez-flange-system",
-    "imagePlaceholder": "/products/categories/mez-flange-system.webp"
-  },
-  {
-    "id": "c7be793f-e3e9-441f-853a-3a8e2b3c7fb3",
-    "title": "Pipe & Riser Components",
-    "path": "/product-categories/pipe-and-riser-components",
-    "slug": "pipe-and-riser-components",
-    "imagePlaceholder": "/products/categories/pipe-and-riser-components.webp"
+    "id": "da0ec5af-45a5-4cd8-9143-74a440cba2c1",
+    "title": "Venting",
+    "path": "/product-categories/venting",
+    "slug": "venting",
+    "imagePlaceholder": "/products/categories/venting.webp"
   }
 ] as any;
 export const PRODUCTS: CatalogProduct[] = [
   {
     "id": "028176f5-d47e-4f9e-8d1c-273c16348fe2",
     "title": "Riser Elbow 90˚ (flat)",
-    "path": "/product-list/riser-elbow-90%CB%9A-(flat)",
+    "path": "/product-list/riser-elbow-90-flat",
     "slugRaw": "riser-elbow-90%CB%9A-(flat)",
     "slugSafe": "riser-elbow-90-flat",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/riser-elbow-90-flat.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "residential-fittings"
     ]
   },
   {
     "id": "03053dba-65a7-4cba-ae33-4c03f60abaf9",
     "title": "Combustion Vent Cap",
-    "path": "/product-list/combustion-vent-cap-",
+    "path": "/product-list/combustion-vent-cap",
     "slugRaw": "combustion-vent-cap-",
     "slugSafe": "combustion-vent-cap",
     "categoryIds": [
-      "96b74d10-db4e-4f6a-a090-bc4176dfd450"
+      "da0ec5af-45a5-4cd8-9143-74a440cba2c1"
     ],
     "imagePlaceholder": "/products/items/combustion-vent-cap.webp",
     "categorySlugs": [
-      "vent-caps-and-flashings"
+      "venting"
     ]
   },
   {
@@ -160,11 +111,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "straight-boot-box",
     "slugSafe": "straight-boot-box",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/straight-boot-box.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
@@ -174,11 +125,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "boot-box",
     "slugSafe": "boot-box",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/boot-box.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
@@ -188,11 +139,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "flashing",
     "slugSafe": "flashing",
     "categoryIds": [
-      "96b74d10-db4e-4f6a-a090-bc4176dfd450"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/flashing.webp",
     "categorySlugs": [
-      "vent-caps-and-flashings"
+      "residential-fittings"
     ]
   },
   {
@@ -202,25 +153,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "china-cap",
     "slugSafe": "china-cap",
     "categoryIds": [
-      "96b74d10-db4e-4f6a-a090-bc4176dfd450"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/china-cap.webp",
     "categorySlugs": [
-      "vent-caps-and-flashings"
+      "residential-fittings"
     ]
   },
   {
     "id": "29c26927-e0b6-4a78-93b4-e6f78e8a694b",
     "title": "Elbow 90˚",
-    "path": "/product-list/elbow-90%CB%9A",
+    "path": "/product-list/elbow-90",
     "slugRaw": "elbow-90%CB%9A",
     "slugSafe": "elbow-90",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/elbow-90.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "residential-fittings"
     ]
   },
   {
@@ -230,25 +181,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "plenum",
     "slugSafe": "plenum",
     "categoryIds": [
-      "0ebcc58d-5925-4824-a8c7-7d0c87abb6da"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/plenum.webp",
     "categorySlugs": [
-      "equipment-and-accessories"
+      "residential-fittings"
     ]
   },
   {
     "id": "301caa5f-a0a4-4f68-b880-9f60c0eb8e8e",
     "title": "Twist Collar w/Damper & Scoop",
-    "path": "/product-list/twist-collar-w%2Fdamper-%26-scoop",
+    "path": "/product-list/twist-collar-w-damper-and-scoop",
     "slugRaw": "twist-collar-w%2Fdamper-%26-scoop",
     "slugSafe": "twist-collar-w-damper-and-scoop",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/twist-collar-w-damper-and-scoop.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "residential-fittings"
     ]
   },
   {
@@ -258,11 +209,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "register-box",
     "slugSafe": "register-box",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/register-box.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
@@ -272,11 +223,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "angle-iron",
     "slugSafe": "angle-iron",
     "categoryIds": [
-      "9e60a4e8-1fa0-424b-8df1-cc394efa6e3e"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/angle-iron.webp",
     "categorySlugs": [
-      "duct-components"
+      "miscellaneous"
     ]
   },
   {
@@ -286,25 +237,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "flat-stock",
     "slugSafe": "flat-stock",
     "categoryIds": [
-      "9e60a4e8-1fa0-424b-8df1-cc394efa6e3e"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/flat-stock.webp",
     "categorySlugs": [
-      "duct-components"
+      "miscellaneous"
     ]
   },
   {
     "id": "3c0468e6-8eee-49c8-980d-2f8d55abc3f8",
     "title": "MEZ FLANGE and ACCESORIES",
-    "path": "/product-list/mez-flange-and-accesories-",
+    "path": "/product-list/mez-flange-and-accesories",
     "slugRaw": "mez-flange-and-accesories-",
     "slugSafe": "mez-flange-and-accesories",
     "categoryIds": [
-      "bdbfc4f5-7584-476b-a45b-644131e935d1"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/mez-flange-and-accesories.webp",
     "categorySlugs": [
-      "mez-flange-system"
+      "miscellaneous"
     ]
   },
   {
@@ -314,25 +265,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "dove-tail-collar",
     "slugSafe": "dove-tail-collar",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/dove-tail-collar.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "fittings"
     ]
   },
   {
     "id": "3e2b287c-817f-4d8a-9b5b-fc5f4d052dc1",
     "title": "‘S’-Cleat/Flat ‘S”",
-    "path": "/product-list/%E2%80%98s%E2%80%99-cleat%2Fflat-%E2%80%98s%E2%80%9D",
+    "path": "/product-list/s-cleat-flat-s",
     "slugRaw": "%E2%80%98s%E2%80%99-cleat%2Fflat-%E2%80%98s%E2%80%9D",
     "slugSafe": "s-cleat-flat-s",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/s-cleat-flat-s.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "miscellaneous"
     ]
   },
   {
@@ -342,11 +293,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "side-tab",
     "slugSafe": "side-tab",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/side-tab.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "residential-fittings"
     ]
   },
   {
@@ -356,11 +307,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "pg",
     "slugSafe": "pg",
     "categoryIds": [
-      "0ebcc58d-5925-4824-a8c7-7d0c87abb6da"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/pg.webp",
     "categorySlugs": [
-      "equipment-and-accessories"
+      "miscellaneous"
     ]
   },
   {
@@ -370,11 +321,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "line-set-cover",
     "slugSafe": "line-set-cover",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/line-set-cover.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "miscellaneous"
     ]
   },
   {
@@ -384,11 +335,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "reducer-sure-fit",
     "slugSafe": "reducer-sure-fit",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/reducer-sure-fit.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "fittings"
     ]
   },
   {
@@ -398,25 +349,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "drive",
     "slugSafe": "drive",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/drive.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "miscellaneous"
     ]
   },
   {
     "id": "55f84fab-8b1b-4a68-994c-e32dca1ce7f7",
     "title": "Wrapped Aluminum Flex w/ Metalized Jacket R-6",
-    "path": "/product-list/wrapped-aluminum-flex-w%2F-metalized-jacket-r-6",
+    "path": "/product-list/wrapped-aluminum-flex-w-metalized-jacket-r-6",
     "slugRaw": "wrapped-aluminum-flex-w%2F-metalized-jacket-r-6",
     "slugSafe": "wrapped-aluminum-flex-w-metalized-jacket-r-6",
     "categoryIds": [
-      "9f5b96cb-e3b3-4158-b1e0-c42a25aaf893"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/wrapped-aluminum-flex-w-metalized-jacket-r-6.webp",
     "categorySlugs": [
-      "flex-duct"
+      "round-duct"
     ]
   },
   {
@@ -426,25 +377,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "duct-ties",
     "slugSafe": "duct-ties",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/duct-ties.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "miscellaneous"
     ]
   },
   {
     "id": "5ae9151f-a8c9-46c9-8efd-3aedd073b367",
     "title": "Turning Vanes",
-    "path": "/product-list/turning-vanes-",
+    "path": "/product-list/turning-vanes",
     "slugRaw": "turning-vanes-",
     "slugSafe": "turning-vanes",
     "categoryIds": [
-      "b98eb550-97aa-44d1-b9a7-a55edece17bf"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/turning-vanes.webp",
     "categorySlugs": [
-      "airflow-control-and-dampers"
+      "miscellaneous"
     ]
   },
   {
@@ -454,11 +405,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "wall-cap",
     "slugSafe": "wall-cap",
     "categoryIds": [
-      "96b74d10-db4e-4f6a-a090-bc4176dfd450"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/wall-cap.webp",
     "categorySlugs": [
-      "vent-caps-and-flashings"
+      "residential-fittings"
     ]
   },
   {
@@ -468,35 +419,35 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "stack-head-boot-box",
     "slugSafe": "stack-head-boot-box",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/stack-head-boot-box.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
     "id": "61293f0f-9b86-4069-80be-b7621637c78a",
     "title": "Riser Elbow 90˚ (standard)",
-    "path": "/product-list/riser-elbow-45%CB%9A-(standard)",
+    "path": "/product-list/riser-elbow-45-standard",
     "slugRaw": "riser-elbow-45%CB%9A-(standard)",
     "slugSafe": "riser-elbow-45-standard",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/riser-elbow-45-standard.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "residential-fittings"
     ]
   },
   {
     "id": "6205678e-93f4-429d-9123-e51eb3af4c27",
     "title": "Spiral Pipe 7’ 5”",
-    "path": "/product-list/spiral-pipe-7%E2%80%99-5%E2%80%9D",
+    "path": "/product-list/spiral-pipe-7-5",
     "slugRaw": "spiral-pipe-7%E2%80%99-5%E2%80%9D",
     "slugSafe": "spiral-pipe-7-5",
     "categoryIds": [
-      "5715b66e-0850-4710-8212-116d8b5c05dd"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/spiral-pipe-7-5.webp",
     "categorySlugs": [
@@ -506,15 +457,15 @@ export const PRODUCTS: CatalogProduct[] = [
   {
     "id": "65299027-974b-4bd3-b89d-65d824ba66c2",
     "title": "Elbow 45˚",
-    "path": "/product-list/elbow-45%CB%9A",
+    "path": "/product-list/elbow-45",
     "slugRaw": "elbow-45%CB%9A",
     "slugSafe": "elbow-45",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/elbow-45.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "residential-fittings"
     ]
   },
   {
@@ -524,7 +475,7 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "kd-pipe",
     "slugSafe": "kd-pipe",
     "categoryIds": [
-      "5715b66e-0850-4710-8212-116d8b5c05dd"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/kd-pipe.webp",
     "categorySlugs": [
@@ -534,11 +485,11 @@ export const PRODUCTS: CatalogProduct[] = [
   {
     "id": "6c204425-29a0-4112-8522-3d7e50ebc4cd",
     "title": "Spiral Pipe 10’",
-    "path": "/product-list/spiral-pipe-10%E2%80%99",
+    "path": "/product-list/spiral-pipe-10",
     "slugRaw": "spiral-pipe-10%E2%80%99",
     "slugSafe": "spiral-pipe-10",
     "categoryIds": [
-      "5715b66e-0850-4710-8212-116d8b5c05dd"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/spiral-pipe-10.webp",
     "categorySlugs": [
@@ -548,15 +499,15 @@ export const PRODUCTS: CatalogProduct[] = [
   {
     "id": "724a555e-8388-43df-a301-b198913b4742",
     "title": "Volume Damper w/ 3/8 Rod & 1 ½” Stand off",
-    "path": "/product-list/volume-damper-w%2F-3%2F8-rod-%26-1-%C2%BD%E2%80%9D-stand-off",
+    "path": "/product-list/volume-damper-w-3-8-rod-and-1-stand-off",
     "slugRaw": "volume-damper-w%2F-3%2F8-rod-%26-1-%C2%BD%E2%80%9D-stand-off",
     "slugSafe": "volume-damper-w-3-8-rod-and-1-stand-off",
     "categoryIds": [
-      "b98eb550-97aa-44d1-b9a7-a55edece17bf"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/volume-damper-w-3-8-rod-and-1-stand-off.webp",
     "categorySlugs": [
-      "airflow-control-and-dampers"
+      "fittings"
     ]
   },
   {
@@ -566,25 +517,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "t-top",
     "slugSafe": "t-top",
     "categoryIds": [
-      "96b74d10-db4e-4f6a-a090-bc4176dfd450"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/t-top.webp",
     "categorySlugs": [
-      "vent-caps-and-flashings"
+      "residential-fittings"
     ]
   },
   {
     "id": "7d3a0a7f-3afd-4099-9d04-f43387d9d3c2",
     "title": "Twist Collar w/Damper",
-    "path": "/product-list/twist-collar-w%2Fdamper",
+    "path": "/product-list/twist-collar-w-damper",
     "slugRaw": "twist-collar-w%2Fdamper",
     "slugSafe": "twist-collar-w-damper",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/twist-collar-w-damper.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "residential-fittings"
     ]
   },
   {
@@ -594,11 +545,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "tee-wye",
     "slugSafe": "tee-wye",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/tee-wye.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "fittings"
     ]
   },
   {
@@ -608,39 +559,39 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "bare-aluminum-flex",
     "slugSafe": "bare-aluminum-flex",
     "categoryIds": [
-      "9f5b96cb-e3b3-4158-b1e0-c42a25aaf893"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/bare-aluminum-flex.webp",
     "categorySlugs": [
-      "flex-duct"
+      "round-duct"
     ]
   },
   {
     "id": "8397bf35-28b2-41e9-a5bb-abad2ca85007",
     "title": "Duct Liner/Wrap",
-    "path": "/product-list/duct-liner%2Fwrap",
+    "path": "/product-list/duct-liner-wrap",
     "slugRaw": "duct-liner%2Fwrap",
     "slugSafe": "duct-liner-wrap",
     "categoryIds": [
-      "9e60a4e8-1fa0-424b-8df1-cc394efa6e3e"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/duct-liner-wrap.webp",
     "categorySlugs": [
-      "duct-components"
+      "miscellaneous"
     ]
   },
   {
     "id": "8a13deb2-5b63-4822-96a6-e2be15b99532",
     "title": "1” Circle Liner Spiral Pipe 10’",
-    "path": "/product-list/1%E2%80%9D-circle-liner-spiral-pipe-10%E2%80%99-",
+    "path": "/product-list/1-circle-liner-spiral-pipe-10",
     "slugRaw": "1%E2%80%9D-circle-liner-spiral-pipe-10%E2%80%99-",
     "slugSafe": "1-circle-liner-spiral-pipe-10",
     "categoryIds": [
-      "5715b66e-0850-4710-8212-116d8b5c05dd"
+      "9e15109f-11eb-428e-a874-a5be3cbc045c"
     ],
     "imagePlaceholder": "/products/items/1-circle-liner-spiral-pipe-10.webp",
     "categorySlugs": [
-      "round-duct"
+      "circlelined-products"
     ]
   },
   {
@@ -650,11 +601,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "riser-pipe",
     "slugSafe": "riser-pipe",
     "categoryIds": [
-      "c7be793f-e3e9-441f-853a-3a8e2b3c7fb3"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/riser-pipe.webp",
     "categorySlugs": [
-      "pipe-and-riser-components"
+      "residential-fittings"
     ]
   },
   {
@@ -664,11 +615,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "furnace-stand",
     "slugSafe": "furnace-stand",
     "categoryIds": [
-      "0ebcc58d-5925-4824-a8c7-7d0c87abb6da"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/furnace-stand.webp",
     "categorySlugs": [
-      "equipment-and-accessories"
+      "residential-fittings"
     ]
   },
   {
@@ -678,25 +629,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "riser-end-cap",
     "slugSafe": "riser-end-cap",
     "categoryIds": [
-      "c7be793f-e3e9-441f-853a-3a8e2b3c7fb3"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/riser-end-cap.webp",
     "categorySlugs": [
-      "pipe-and-riser-components"
+      "fittings"
     ]
   },
   {
     "id": "9a7db232-494b-4a14-b7f7-1d2a8423a2e0",
     "title": "Ceiling Box",
-    "path": "/product-list/ceiling--box",
+    "path": "/product-list/ceiling-box",
     "slugRaw": "ceiling--box",
     "slugSafe": "ceiling-box",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/ceiling-box.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
@@ -706,81 +657,81 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "duct-board-collar",
     "slugSafe": "duct-board-collar",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/duct-board-collar.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "residential-fittings"
     ]
   },
   {
     "id": "a6851270-a971-48c3-b357-336385d043ad",
     "title": "Twist Collar/Spin-In Collar",
-    "path": "/product-list/twist-collar%2Fspin-in-collar",
+    "path": "/product-list/twist-collar-spin-in-collar",
     "slugRaw": "twist-collar%2Fspin-in-collar",
     "slugSafe": "twist-collar-spin-in-collar",
     "categoryIds": [
-      "4a837012-97fb-4d8e-8e32-719924f903a9"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/twist-collar-spin-in-collar.webp",
     "categorySlugs": [
-      "reducers-and-collars"
+      "fittings"
     ]
   },
   {
     "id": "aba536be-c397-423e-a1eb-ada838965f77",
     "title": "Flex Connector",
-    "path": "/product-list/flex-connector-",
+    "path": "/product-list/flex-connector",
     "slugRaw": "flex-connector-",
     "slugSafe": "flex-connector",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/flex-connector.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "miscellaneous"
     ]
   },
   {
     "id": "ad677a60-d12a-42d0-82b7-37fb78c9ff06",
     "title": "1” Circle Lined WYE",
-    "path": "/product-list/1%E2%80%9D-circle-lined-wye",
+    "path": "/product-list/1-circle-lined-wye",
     "slugRaw": "1%E2%80%9D-circle-lined-wye",
     "slugSafe": "1-circle-lined-wye",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "9e15109f-11eb-428e-a874-a5be3cbc045c"
     ],
     "imagePlaceholder": "/products/items/1-circle-lined-wye.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "circlelined-products"
     ]
   },
   {
     "id": "c2873fd7-dd07-460a-baa9-6566972e2eb2",
     "title": "1” Circle Lined KD Pipe",
-    "path": "/product-list/1%E2%80%9D-circle-lined-kd-pipe",
+    "path": "/product-list/1-circle-lined-kd-pipe",
     "slugRaw": "1%E2%80%9D-circle-lined-kd-pipe",
     "slugSafe": "1-circle-lined-kd-pipe",
     "categoryIds": [
-      "5715b66e-0850-4710-8212-116d8b5c05dd"
+      "9e15109f-11eb-428e-a874-a5be3cbc045c"
     ],
     "imagePlaceholder": "/products/items/1-circle-lined-kd-pipe.webp",
     "categorySlugs": [
-      "round-duct"
+      "circlelined-products"
     ]
   },
   {
     "id": "c70b8647-180f-47f3-b7ba-12b6eada5686",
     "title": "Pancake Taper (Cookie Cutter)",
-    "path": "/product-list/pancake-taper-(cookie-cutter)",
+    "path": "/product-list/pancake-taper-cookie-cutter",
     "slugRaw": "pancake-taper-(cookie-cutter)",
     "slugSafe": "pancake-taper-cookie-cutter",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/pancake-taper-cookie-cutter.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "fittings"
     ]
   },
   {
@@ -790,53 +741,53 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "conductor-pipe",
     "slugSafe": "conductor-pipe",
     "categoryIds": [
-      "c7be793f-e3e9-441f-853a-3a8e2b3c7fb3"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/conductor-pipe.webp",
     "categorySlugs": [
-      "pipe-and-riser-components"
+      "round-duct"
     ]
   },
   {
     "id": "d3d7aabb-2429-4c6d-ab3c-63c11c89b66b",
     "title": "Riser Elbow 45˚ (standard)",
-    "path": "/product-list/riser-elbow-45%CB%9A-(standard)",
+    "path": "/product-list/riser-elbow-45-standard",
     "slugRaw": "riser-elbow-45%CB%9A-(standard)",
     "slugSafe": "riser-elbow-45-standard",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/riser-elbow-45-standard.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "residential-fittings"
     ]
   },
   {
     "id": "d425a64a-fe47-438a-87d9-b7655069c125",
     "title": "Sealers & Adhesives",
-    "path": "/product-list/sealers-%26-adhesives-",
+    "path": "/product-list/sealers-and-adhesives",
     "slugRaw": "sealers-%26-adhesives-",
     "slugSafe": "sealers-and-adhesives",
     "categoryIds": [
-      "01763a64-ba0c-4a80-ac80-cab6c3d0e426"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/sealers-and-adhesives.webp",
     "categorySlugs": [
-      "sealants-and-tapes"
+      "miscellaneous"
     ]
   },
   {
     "id": "d97c386c-9864-4ed5-a3e1-c2cba5207d47",
     "title": "Wrapped Aluminum Flex w/ Metalized Jacket R-8",
-    "path": "/product-list/wrapped-aluminum-flex-w%2F-metalized-jacket-r-8",
+    "path": "/product-list/wrapped-aluminum-flex-w-metalized-jacket-r-8",
     "slugRaw": "wrapped-aluminum-flex-w%2F-metalized-jacket-r-8",
     "slugSafe": "wrapped-aluminum-flex-w-metalized-jacket-r-8",
     "categoryIds": [
-      "9f5b96cb-e3b3-4158-b1e0-c42a25aaf893"
+      "b882726f-044f-4430-bd68-4726ff1c7805"
     ],
     "imagePlaceholder": "/products/items/wrapped-aluminum-flex-w-metalized-jacket-r-8.webp",
     "categorySlugs": [
-      "flex-duct"
+      "round-duct"
     ]
   },
   {
@@ -846,11 +797,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "saddle-wye",
     "slugSafe": "saddle-wye",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/saddle-wye.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "fittings"
     ]
   },
   {
@@ -860,25 +811,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "drain-pan",
     "slugSafe": "drain-pan",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/drain-pan.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
     "id": "e44f3cfa-c3b0-42b4-8c43-06a38b4c2c0d",
     "title": "Standing ‘S”",
-    "path": "/product-list/standing-%E2%80%98s%E2%80%9D",
+    "path": "/product-list/standing-s",
     "slugRaw": "standing-%E2%80%98s%E2%80%9D",
     "slugSafe": "standing-s",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/standing-s.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "miscellaneous"
     ]
   },
   {
@@ -888,25 +839,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "hanger-strap",
     "slugSafe": "hanger-strap",
     "categoryIds": [
-      "a3a56b0f-8b8b-4576-8628-2ac5e51d8000"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/hanger-strap.webp",
     "categorySlugs": [
-      "connectors-and-hardware"
+      "miscellaneous"
     ]
   },
   {
     "id": "eb6afabd-560a-480c-804e-a7e90aad3053",
     "title": "Duct/Foil Tapes",
-    "path": "/product-list/duct%2Ffoil-tapes-",
+    "path": "/product-list/duct-foil-tapes",
     "slugRaw": "duct%2Ffoil-tapes-",
     "slugSafe": "duct-foil-tapes",
     "categoryIds": [
-      "01763a64-ba0c-4a80-ac80-cab6c3d0e426"
+      "7e1bdba3-a0de-4cba-9ae1-4796645cedc7"
     ],
     "imagePlaceholder": "/products/items/duct-foil-tapes.webp",
     "categorySlugs": [
-      "sealants-and-tapes"
+      "miscellaneous"
     ]
   },
   {
@@ -916,11 +867,11 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "return-air-can",
     "slugSafe": "return-air-can",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/return-air-can.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
@@ -930,25 +881,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "end-cap",
     "slugSafe": "end-cap",
     "categoryIds": [
-      "0ebcc58d-5925-4824-a8c7-7d0c87abb6da"
+      "5037599b-c279-41f9-be72-ec48ad107397"
     ],
     "imagePlaceholder": "/products/items/end-cap.webp",
     "categorySlugs": [
-      "equipment-and-accessories"
+      "fittings"
     ]
   },
   {
     "id": "f2e1b1d7-2cdb-4450-a837-96073741188d",
     "title": "1” Circle Lined Elbow",
-    "path": "/product-list/1%E2%80%9D-circle-lined-elbow",
+    "path": "/product-list/1-circle-lined-elbow",
     "slugRaw": "1%E2%80%9D-circle-lined-elbow",
     "slugSafe": "1-circle-lined-elbow",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "9e15109f-11eb-428e-a874-a5be3cbc045c"
     ],
     "imagePlaceholder": "/products/items/1-circle-lined-elbow.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "circlelined-products"
     ]
   },
   {
@@ -958,25 +909,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "swamp-cooler-diffuser",
     "slugSafe": "swamp-cooler-diffuser",
     "categoryIds": [
-      "0ebcc58d-5925-4824-a8c7-7d0c87abb6da"
+      "da0ec5af-45a5-4cd8-9143-74a440cba2c1"
     ],
     "imagePlaceholder": "/products/items/swamp-cooler-diffuser.webp",
     "categorySlugs": [
-      "equipment-and-accessories"
+      "venting"
     ]
   },
   {
     "id": "f63dca81-d765-4396-a496-97521640955d",
     "title": "Riser Elbow 45˚ (flat)",
-    "path": "/product-list/riser-elbow-45%CB%9A-(flat)",
+    "path": "/product-list/riser-elbow-45-flat",
     "slugRaw": "riser-elbow-45%CB%9A-(flat)",
     "slugSafe": "riser-elbow-45-flat",
     "categoryIds": [
-      "3657abb4-bd68-4e1d-8c17-86ad7773ead4"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/riser-elbow-45-flat.webp",
     "categorySlugs": [
-      "elbows-and-fittings"
+      "residential-fittings"
     ]
   },
   {
@@ -986,25 +937,25 @@ export const PRODUCTS: CatalogProduct[] = [
     "slugRaw": "cone-boot",
     "slugSafe": "cone-boot",
     "categoryIds": [
-      "66bc596e-6594-46ec-873b-fbb6f227aba1"
+      "03c30a92-062a-4878-b1c3-1376c915392d"
     ],
     "imagePlaceholder": "/products/items/cone-boot.webp",
     "categorySlugs": [
-      "boot-boxes-and-transitions"
+      "residential-fittings"
     ]
   },
   {
     "id": "f79c7adf-facd-4d75-9753-b48ad6e29efe",
     "title": "1” Circle Liner",
-    "path": "/product-list/1%E2%80%9D-circle-liner",
+    "path": "/product-list/1-circle-liner",
     "slugRaw": "1%E2%80%9D-circle-liner",
     "slugSafe": "1-circle-liner",
     "categoryIds": [
-      "9e60a4e8-1fa0-424b-8df1-cc394efa6e3e"
+      "9e15109f-11eb-428e-a874-a5be3cbc045c"
     ],
     "imagePlaceholder": "/products/items/1-circle-liner.webp",
     "categorySlugs": [
-      "duct-components"
+      "circlelined-products"
     ]
   }
 ] as any;
