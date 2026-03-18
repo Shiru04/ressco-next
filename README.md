@@ -1,4 +1,4 @@
-# GC Heating & Cooling — Next.js Static Export
+# RESSCO Metals — Next.js Static Export
 
 ## Local dev
 
