@@ -144,13 +144,12 @@ export default function ProductListClientGrid(props: {
               <Card className="overflow-hidden transition hover:-translate-y-0.5 hover:shadow-md">
                 <div className="relative aspect-[4/3]">
                   <ResponsiveImage
-                    srcBase={p.imagePlaceholder.replace(".webp", "")}
-                    alt={p.title}
-                    fill
-                    widths={[320, 480, 640, 960]}
-                    sizes="(min-width: 1024px) 33vw, 100vw"
-                    className="object-cover"
-                  />
+                      srcBase={p.imagePlaceholder.replace(".webp", "")}
+                      alt={p.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover"
+                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
                 </div>
                 <div className="p-5">

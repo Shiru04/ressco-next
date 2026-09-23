@@ -1,23 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
   trailingSlash: true,
 
   images: {
-    // Static export requires unoptimized: true (no server for on-demand optimization).
-    // The prebuild optimize-images.ts script handles responsive variants via sharp.
-    unoptimized: true,
-
-    // Declare the formats the prebuild script produces so <Image> generates
-    // correct <source> sets when used with a custom loader.
+    // Vercel handles image optimization natively via the Image Optimization API.
+    // No pre-generated variants needed.
     formats: ["image/avif", "image/webp"],
-
-    // Trim device-size list to match the widths the optimize-images script
-    // actually generates — avoids Next producing unnecessary srcset entries.
-    deviceSizes: [640, 960, 1200, 1600],
-    imageSizes: [320, 420, 480, 768],
   },
+
+  // ISR (revalidation) defaults to 0 (no ISR). Set on dynamic pages.
+  // All static routes remain fully static (RSC rendering).
+  // Next.js 14+ removed reactStrictMode config in favor of experimental;
+  // removed to avoid warnings in Next 16.
+  // reactStrictMode: true,
 
   // Reduce build output noise
   logging: {
@@ -27,10 +23,7 @@ const nextConfig: NextConfig = {
   // Turbopack is default in Next.js 16 — empty config silences the webpack warning
   turbopack: {},
 
-  // Enable React strict mode for development quality
-  reactStrictMode: true,
-
-  // Compress static export output
+  // Compress responses
   compress: true,
 
   // Generate ETags for caching

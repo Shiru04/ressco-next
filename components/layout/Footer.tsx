@@ -11,7 +11,6 @@ export function Footer() {
           srcBase={"/brand/footer-metal".replace(".webp", "")}
           alt="Metal texture background"
           fill
-          widths={[640, 960, 1200, 1600]}
           sizes="100vw"
           className="object-cover opacity-25"
         />

@@ -41,13 +41,12 @@ export default function ProductCategoriesIndexPage() {
             <Card className="overflow-hidden">
               <div className="relative aspect-[4/3]">
                 <ResponsiveImage
-                  srcBase={c.imagePlaceholder.replace(".webp", "")}
-                  alt={c.title}
-                  fill
-                  widths={[320, 480, 640, 960]}
-                  sizes="(min-width: 1024px) 33vw, 100vw"
-                  className="object-cover"
-                />
+                    srcBase={c.imagePlaceholder.replace(".webp", "")}
+                    alt={c.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
               </div>
 

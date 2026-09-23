@@ -33,7 +33,6 @@ export function PageHero({
         alt={media.alt}
         fill
         priority={!!media.priority}
-        widths={[640, 960, 1200, 1600]}
         sizes="100vw"
         className="object-cover"
       />

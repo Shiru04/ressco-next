@@ -302,13 +302,12 @@ export default function AboutPage() {
             <Card key={member.name} className="overflow-hidden">
               <div className="relative aspect-[2/3]">
                 <ResponsiveImage
-                  srcBase={member.src}
-                  alt={`${member.name} — ${member.role}`}
-                  widths={[320, 480]}
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  fill
-                  className="rounded-t-2xl"
-                />
+                    srcBase={member.src}
+                    alt={`${member.name} — ${member.role}`}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    fill
+                    className="rounded-t-2xl"
+                  />
               </div>
               <div className="p-5 text-center">
                 <div className="text-lg font-extrabold">{member.name}</div>

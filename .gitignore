@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated image variants (Vercel handles optimization at runtime)
+public/**/*-w*.webp
+public/**/*-w*.avif

@@ -46,15 +46,14 @@ export default async function ProductDetailPage({
       <div className="grid gap-8 lg:grid-cols-2">
         <Card className="overflow-hidden">
           <div className="relative aspect-[4/3]">
-            <ResponsiveImage
-              srcBase={product.imagePlaceholder.replace(".webp", "")}
-              alt={product.title}
-              fill
-              priority
-              widths={[320, 480, 640, 960]}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
+              <ResponsiveImage
+                srcBase={product.imagePlaceholder.replace(".webp", "")}
+                alt={product.title}
+                fill
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
           </div>
         </Card>
 

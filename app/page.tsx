@@ -109,7 +109,6 @@ export default function HomePage() {
                   srcBase={ASSETS.badge.replace(".webp", "")}
                   alt="RESSCO Metals badge"
                   fill
-                  widths={[256, 384, 512]}
                   sizes="40px"
                   className="object-cover"
                 />
@@ -129,7 +128,6 @@ export default function HomePage() {
               alt="RESSCO Metals sheet metal shop and HVAC supply warehouse in Anaheim, CA"
               fill
               priority
-              widths={[420, 640, 768, 960, 1200]}
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-center"
             />
@@ -271,7 +269,6 @@ export default function HomePage() {
                 srcBase={ASSETS.about1.replace(".webp", "")}
                 alt="RESSCO Metals fabrication shop"
                 fill
-                widths={[420, 640, 820]}
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 className="object-cover"
               />
@@ -281,7 +278,6 @@ export default function HomePage() {
                 srcBase={ASSETS.about2.replace(".webp", "")}
                 alt="Sheet metal components"
                 fill
-                widths={[420, 640, 820]}
                 sizes="(min-width: 1024px) 25vw, 50vw"
                 className="object-cover"
               />
@@ -291,7 +287,6 @@ export default function HomePage() {
                 srcBase={ASSETS.about3.replace(".webp", "")}
                 alt="RESSCO Metals warehouse and HVAC supply"
                 fill
-                widths={[420, 640, 820]}
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />

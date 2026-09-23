@@ -67,13 +67,12 @@ export default async function ProductCategoryPage({
             <Card className="overflow-hidden">
               <div className="relative aspect-[4/3]">
                 <ResponsiveImage
-                  srcBase={p.imagePlaceholder.replace(".webp", "")}
-                  alt={p.title}
-                  fill
-                  widths={[320, 480, 640, 960]}
-                  sizes="(min-width: 1024px) 33vw, 100vw"
-                  className="object-cover"
-                />
+                    srcBase={p.imagePlaceholder.replace(".webp", "")}
+                    alt={p.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
               </div>
 
@@ -92,14 +91,13 @@ export default async function ProductCategoryPage({
       <div className="mt-12">
         <Card className="overflow-hidden">
           <div className="relative aspect-[16/6]">
-            <ResponsiveImage
-              srcBase={cat.imagePlaceholder.replace(".webp", "")}
-              alt={`${cat.title} category image`}
-              fill
-              widths={[320, 480, 640, 960]}
-              sizes="100vw"
-              className="object-cover"
-            />
+              <ResponsiveImage
+                srcBase={cat.imagePlaceholder.replace(".webp", "")}
+                alt={`${cat.title} category image`}
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
           </div>
         </Card>
       </div>
