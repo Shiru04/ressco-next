@@ -23,11 +23,8 @@ function runSync(label: string, cmd: string, args: string[]) {
 async function main() {
   const t0 = Date.now();
 
-  // Phase 1: sync catalog (sequential prerequisite)
+  // Sync catalog data (generates lib/catalog.generated.ts)
   runSync("sync-catalog", "tsx", ["scripts/sync-catalog.ts"]);
-
-  // Phase 2: generate sitemap
-  runSync("generate-sitemap", "tsx", ["scripts/generate-sitemap.ts"]);
 
   const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
   console.log(`[prebuild] all done in ${elapsed}s`);
